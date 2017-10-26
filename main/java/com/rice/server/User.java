@@ -1,4 +1,4 @@
-package com.rice.server;git add a
+package com.rice.server;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +8,34 @@ import java.util.Map;
 public class User {
     public String username;
     public String password;
+    private String firstName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getUserPhoto() {
+        return userPhoto;
+    }
+
+    public void setUserPhoto(String userPhoto) {
+        this.userPhoto = userPhoto;
+    }
+
+    private String lastName;
+    private String userPhoto;
     public boolean isLoggedIn;
     private static List<User> users = new ArrayList<>();
 
