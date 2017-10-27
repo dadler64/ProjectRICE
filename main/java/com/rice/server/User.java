@@ -6,48 +6,58 @@ import java.util.List;
 import java.util.Map;
 
 public class User {
-    public String username;
-    public String password;
-    private String firstName;
+    private String username;
+    private String password;
+    private Status status;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getUserPhoto() {
-        return userPhoto;
-    }
-
-    public void setUserPhoto(String userPhoto) {
-        this.userPhoto = userPhoto;
-    }
-
-    private String lastName;
-    private String userPhoto;
-    public boolean isLoggedIn;
     private static List<User> users = new ArrayList<>();
 
-    public User(String username, String password, boolean isLoggedIn) {
+    public User(String username, String password, Status status) {
         this.username = username; // Shouldn't be more than 16 characters
         this.password = password; // Shouldn't be more than 16 characters
-        this.isLoggedIn = isLoggedIn;
+        this.status = status;
         users.add(this);
     }
 
-    public static String getUsername(User user) {
-        return user.username;
+    public enum Status {
+        LOGGED_ON, LOGGED_OFF, BLOCKED, UNKNOWN
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public static List<User> getUsers() {
+        return users;
+    }
+
+    public static void addUser(User user) {
+        users.add(user);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("User [username=%s password=%s status= %s]", username, password , status);
     }
 
     public static String getUsernames() {
@@ -55,21 +65,18 @@ public class User {
         sb.append("       Users:       |     Passwords:     | Login Status:\n");
         sb.append("--------------------|--------------------|---------------\n");
         for (User user: users) {
-            sb.append(String.format(" - %s%s |  %s%s  |     %b%n", user.username, getSpaces(user.username), user.password, getSpaces(user.password), user.isLoggedIn));
+            sb.append(String.format("  %s%s |  %s%s  |     %b%n", user.username, getSpaces(user.username), user.password, getSpaces(user.password), user.status.toString()));
         }
         sb.append("\n");
         return sb.toString();
     }
 
-    public static String getPassword(User user) {
-        return user.username;
-    }
-
+    /*
     public static int getNumUsers() {
         return users.size();
     }
 
-    public static Map<String, String> getUser(User user) {
+    public static Map<String, String> getAllUsers(User user) {
         Map<String, String> userInfo = new HashMap<>();
         userInfo.put(user.username, user.password);
         return userInfo;
@@ -82,15 +89,23 @@ public class User {
         }
         return userInfo;
     }
+    */
 
     private static String getSpaces(String str) {
         StringBuilder sb = new StringBuilder();
+        if (str == null) {
+            sb.append("             ");
+            return sb.toString();
+        }
+
         if (str.length() < 16 && str.length() > 0) {
             for (int i = 0; i < (16 - str.length()); i++) {
                 sb.append(" ");
             }
         } else {
-            sb.append("");
+            for (int i = 0; i < 16; i++) {
+                sb.append(" ");
+            }
         }
         return sb.toString();
     }
