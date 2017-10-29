@@ -1,1 +1,1 @@
-[{"userName":"dadler", "password":"password", "status":"LOGGED_OFF"}, {"userName":"mcgoverns", "password":"password1", "status":"LOGGED_OFF"}, {"userName":"sheltonz", "password":"password2", "status":"LOGGED_OFF"}]
+[{"username":"dadler", "password":"password", "status":"LOGGED_OFF"}, {"username":"mcgoverns", "password":"password1", "status":"LOGGED_OFF"}, {"username":"sheltonz", "password":"password2", "status":"LOGGED_OFF"}]

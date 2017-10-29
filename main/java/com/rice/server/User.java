@@ -1,26 +1,20 @@
 package com.rice.server;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class User {
     private String username;
     private String password;
-    private Status status;
+    private UserStatus status;
 
     private static List<User> users = new ArrayList<>();
 
-    public User(String username, String password, Status status) {
+    public User(String username, String password, UserStatus status) {
         this.username = username; // Shouldn't be more than 16 characters
         this.password = password; // Shouldn't be more than 16 characters
         this.status = status;
         users.add(this);
-    }
-
-    public enum Status {
-        LOGGED_ON, LOGGED_OFF, BLOCKED, UNKNOWN
     }
 
     public String getUsername() {
@@ -39,11 +33,11 @@ public class User {
         this.password = password;
     }
 
-    public Status getStatus() {
+    public UserStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(UserStatus status) {
         this.status = status;
     }
 
@@ -62,7 +56,7 @@ public class User {
 
     public static String getUsernames() {
         StringBuilder sb = new StringBuilder();
-        sb.append("       Users:       |     Passwords:     | Login Status:\n");
+        sb.append("       Users:       |     Passwords:     | LoginRecord Status:\n");
         sb.append("--------------------|--------------------|---------------\n");
         for (User user: users) {
             sb.append(String.format("  %s%s |  %s%s  |     %b%n", user.username, getSpaces(user.username), user.password, getSpaces(user.password), user.status.toString()));
@@ -71,7 +65,7 @@ public class User {
         return sb.toString();
     }
 
-    /*
+/*
     public static int getNumUsers() {
         return users.size();
     }
@@ -89,7 +83,7 @@ public class User {
         }
         return userInfo;
     }
-    */
+*/
 
     private static String getSpaces(String str) {
         StringBuilder sb = new StringBuilder();

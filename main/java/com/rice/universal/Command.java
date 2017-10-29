@@ -1,4 +1,4 @@
-package com.rice.server;
+package com.rice.universal;
 
 public interface Command {
     // Example of how to use said command

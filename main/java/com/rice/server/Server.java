@@ -18,6 +18,8 @@ package com.rice.server;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.rice.universal.CommandLine;
+import com.rice.universal.CustomException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,7 +30,7 @@ import java.util.List;
 
 public class Server {
 
-    public static void main(String... args) throws IOException {
+    public static void main(String... args) throws IOException, CustomException {
         BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
         getUsersFromJson("main/resources/Users.json");
         String input;

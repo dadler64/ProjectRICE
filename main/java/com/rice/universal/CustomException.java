@@ -1,4 +1,4 @@
-package com.rice.server;
+package com.rice.universal;
 
 public class CustomException extends Exception {
 
