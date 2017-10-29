@@ -23,6 +23,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.rice.server.User;
+import com.rice.server.UserStatus;
 
 
 public class UserTest {
@@ -32,7 +33,7 @@ public class UserTest {
         List<User> list = new ArrayList<User>();
         // Populate list of Tasks
         for (int i = 0; i < 20; i++) {
-            list.add(new User("username", "password", User.Status.LOGGED_OFF));
+            list.add(new User("username", "password", UserStatus.LOGGED_OFF));
         }
         // Instantiate Gson Object
         Gson gson = new Gson();

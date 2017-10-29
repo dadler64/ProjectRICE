@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a06a428e-7522-46f4-a821-a7083ec9427e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/client/ClientStatus.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/client/LoginRecord.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/server/UserStatus.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/Command.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/CommandLine.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/CommandLinePane.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/CustomException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/resources/RICE Graphics.sketch" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/resources/login.png" />
       <change beforePath="" afterPath="$PROJECT_DIR$/test/java/chat/ChatClient.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/test/java/chat/ChatServer.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/test/java/chat/Protocol.java" />
@@ -22,15 +10,6 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/test/java/examples/osxconsole/ConsoleTest.java" />
       <change beforePath="" afterPath="$PROJECT_DIR$/test/java/examples/osxconsole/OSXConsole.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ProjectRICE.iml" afterPath="$PROJECT_DIR$/ProjectRICE.iml" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/client/Main.java" afterPath="$PROJECT_DIR$/main/java/com/rice/client/Client.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/Command.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/CommandLine.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/CustomException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/Server.java" afterPath="$PROJECT_DIR$/main/java/com/rice/server/Server.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/User.java" afterPath="$PROJECT_DIR$/main/java/com/rice/server/User.java" />
-      <change beforePath="$PROJECT_DIR$/main/resources/Users.json" afterPath="$PROJECT_DIR$/main/resources/Users.json" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/test/java/gson/examples/e2/MainTest.java" afterPath="$PROJECT_DIR$/test/java/gson/examples/e2/TaskTest.java" />
       <change beforePath="$PROJECT_DIR$/test/java/gson/examples/user/UserTest.java" afterPath="$PROJECT_DIR$/test/java/gson/examples/user/UserTest.java" />
     </list>
@@ -91,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/main/java/com/rice/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
-              <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+              <caret line="52" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="3" />
               <folding>
                 <element signature="e#2174#2175#0" expanded="true" />
                 <element signature="e#2202#2203#0" expanded="true" />
@@ -667,7 +646,7 @@
       <workItem from="1509052246655" duration="10825000" />
       <workItem from="1509106136681" duration="1829000" />
       <workItem from="1509124094474" duration="6780000" />
-      <workItem from="1509215118141" duration="15005000" />
+      <workItem from="1509215118141" duration="15152000" />
     </task>
     <task id="LOCAL-00001" summary="Converted project int a Maven project. On a side note Zach this is an example of how to pronounce 'Maven':&#10;https://www.youtube.com/watch?v=QWAbNiKfVhA">
       <created>1509052219092</created>
@@ -690,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509068242486</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated and modularized project">
+      <created>1509302491702</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1509302491703</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -708,7 +694,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43875000" />
+    <option name="totallyTimeSpent" value="44022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="22" width="960" height="1141" extended-state="0" />
@@ -783,7 +769,8 @@
     <MESSAGE value="Converted project int a Maven project. On a side note Zach this is an example of how to pronounce 'Maven':&#10;https://www.youtube.com/watch?v=QWAbNiKfVhA" />
     <MESSAGE value="Added examples for GSON/JSON" />
     <MESSAGE value="Added a basic command line to the server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a basic command line to the server" />
+    <MESSAGE value="Updated and modularized project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated and modularized project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -941,6 +928,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="150" lean-forward="false" selection-start-line="0" selection-start-column="150" selection-end-line="0" selection-end-column="150" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -948,6 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,7 +1208,7 @@
     <entry file="file://$PROJECT_DIR$/main/java/com/rice/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+          <caret line="52" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="3" />
           <folding>
             <element signature="e#2174#2175#0" expanded="true" />
             <element signature="e#2202#2203#0" expanded="true" />

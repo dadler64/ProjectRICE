@@ -25,7 +25,7 @@ import com.google.gson.reflect.TypeToken;
 
 
 
-public class MainTest {
+public class TaskTest {
 
     public static void main(String[] args) {
         // Create a list of Tasks
