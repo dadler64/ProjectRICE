@@ -1,5 +1,7 @@
 package com.rice.universal;
 
+import java.util.List;
+
 public interface Command {
     // Example of how to use said command
     String getUsage();

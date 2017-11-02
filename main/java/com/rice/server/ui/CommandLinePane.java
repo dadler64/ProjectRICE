@@ -1,26 +1,41 @@
-package com.rice.universal;
+package com.rice.server.ui;
 
+import com.rice.universal.CommandLine;
+import com.rice.universal.CustomException;
+import javafx.beans.value.ChangeListener;
 import javafx.event.EventHandler;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TitledPane;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 
-public class CommandLinePane extends BorderPane implements EventHandler<KeyEvent> {
+public class CommandLinePane extends TitledPane implements EventHandler<KeyEvent> {
 
-    private final CommandLine commandLine = new CommandLine();
     private final TextField textField = new TextField();
     private final TextArea textArea = new TextArea();
+    private CommandLine commandLine;
 
-    public CommandLinePane() {
+    public CommandLinePane(CommandLine commandLine) {
+        this.commandLine = commandLine;
+        this.textArea.textProperty().addListener((ChangeListener<Object>) (observable, oldValue, newValue) -> {
+            // This will scroll to the bottom
+            textArea.setScrollTop(Double.MAX_VALUE);
+            // Use Double.MIN_VALUE to scroll to the top
+        });
         this.textField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
                 if (!textField.getText().isEmpty()) {
-                    commandLine.addToHistory(textField.getText());
-                    writeToConsole(textField.getText());
-                    textField.clear();
+                    try {
+                        commandLine.addToHistory(textField.getText());
+//                        writeToConsole(textField.getText());
+                        writeToConsole(commandLine.runCommand(textField.getText()));
+                        textField.clear();
+                    } catch (CustomException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
             if (keyEvent.getCode() == KeyCode.UP) {
@@ -38,19 +53,30 @@ public class CommandLinePane extends BorderPane implements EventHandler<KeyEvent
         scrollPane.setContent(textArea);
         scrollPane.setFitToWidth(true);
         scrollPane.setFitToHeight(true);
-        this.setTop(textArea);
-        this.setBottom(scrollPane);
+        BorderPane borderPane = new BorderPane();
+        borderPane.setCenter(scrollPane);
+//        borderPane.setBottom(textField);
+        borderPane.setTop(textField);
+        this.setText("Command Line");
+        this.setCollapsible(false);
+        this.setContent(borderPane);
+        initCommandLinePane();
     }
 
+    private void initCommandLinePane() {
+    }
+
+
     private void writeToConsole(String input) {
-        textArea.appendText(input + "\n");
+        textArea.setText(input);
+        textArea.appendText("\n");
     }
 
     @Override
     public void handle(KeyEvent keyEvent) {
         if (keyEvent.getCode() == KeyCode.ENTER) {
                 if (!textArea.getText().isEmpty()) {
-                    commandLine.addToHistory(textArea.getText().split("\n")[0]);
+                    this.commandLine.addToHistory(textArea.getText().split("\n")[0]);
                     writeToConsole(textArea.getText());
                     textArea.clear();
                 }

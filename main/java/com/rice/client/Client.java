@@ -16,9 +16,14 @@
 
 package com.rice.client;
 
+import com.rice.server.LoginThread;
+import com.rice.server.Server;
+import com.rice.universal.User;
+import com.rice.universal.UserStatus;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -28,34 +33,50 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 
+import org.fxmisc.richtext.CodeArea;
+import org.fxmisc.richtext.LineNumberFactory;
+
+import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
 
 public class Client extends Application {
+    private boolean loggedIn = false;
+    private final String ip = "172.0.0.1";
+    private final String host = "localhost";
+    private final int port = 25000;
+    private CodeArea codeArea;
+    private ClientCommunicationThread serverCommThread;
 
-    // Path to FXML file
     private final BorderPane root = new BorderPane();
-    private final TextArea textArea = new TextArea();
     private final ButtonBar buttonBar = new ButtonBar();
-    private final Button loginBtn = new Button("LoginRecord");
+    private final Button loginBtn = new Button("Login");
     private final Button logoutBtn = new Button("Logout");
-    private final Label loggedIn = new Label("Logged In");
-    private final Label loggedOut = new Label("Logged Out");
+    private final ScrollPane scrollPane = new ScrollPane();
+
 
     @Override
     public void start(Stage primaryStage) {
+        codeArea = new CodeArea();
+        codeArea.setParagraphGraphicFactory(LineNumberFactory.get(codeArea));
 
+        scrollPane.setContent(codeArea);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setFitToWidth(true);
+
+        buttonBar.setMinHeight(50);
+        buttonBar.setPrefHeight(50);
+        buttonBar.setPadding(new Insets(10));
         buttonBar.getButtons().addAll(loginBtn, logoutBtn);
-        buttonBar.setButtonOrder("");
+
         root.setTop(buttonBar);
-        root.setCenter(textArea);
+        root.setCenter(scrollPane);
 
-        this.loginBtn.setOnAction(actionEvent -> {
-            loginDialog();
-        });
-        this.logoutBtn.setOnAction(actionEvent -> {
-            logoffDialog();
-        });
-
+//        loginBtn.setOnAction(actionEvent -> loginUser());
+        this.loginBtn.setAlignment(Pos.CENTER);
+        this.loginBtn.setOnAction(actionEvent -> loginDialog());
+        this.logoutBtn.setAlignment(Pos.CENTER);
+        this.logoutBtn.setOnAction(actionEvent -> logoffDialog());
 
         // Create a new scene using the root
         final Scene scene = new Scene(root, 500, 400);
@@ -69,25 +90,29 @@ public class Client extends Application {
         launch(args);
     }
 
+    public String getCodeAreaText() {
+        return this.codeArea.getText();
+    }
+
     private void loginDialog() {
-        String imagePath = "/main/resources/login.png";
+        String imagePath = "/login.png";
         // Create the custom dialog.
         Dialog<Pair<String, String>> dialog = new Dialog<>();
-        dialog.setTitle("RICE Server LoginRecord");
+        dialog.setTitle("RICE Server Login");
         dialog.setHeaderText("Please log in with your username and password.");
 
-// Set the icon (must be included in the project).
+        // Set the icon (must be included in the project).
         try {
-            dialog.setGraphic(new ImageView(this.getClass().getResourceAsStream(imagePath).toString()));
+            dialog.setGraphic(new ImageView(this.getClass().getResource(imagePath).toString()));
         } catch (NullPointerException e) {
             System.err.printf("Error: could not find \'login.png\' at ('%s')%n", imagePath);
         }
 
-// Set the button types.
+        // Set the button types.
         ButtonType loginButtonType = new ButtonType("LoginRecord", ButtonBar.ButtonData.OK_DONE);
         dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
 
-// Create the username and password labels and fields.
+        // Create the username and password labels and fields.
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
@@ -103,23 +128,26 @@ public class Client extends Application {
         grid.add(new Label("Password:"), 0, 1);
         grid.add(password, 1, 1);
 
-// Enable/Disable loginBtn button depending on whether a username was entered.
+        // Enable/Disable loginBtn button depending on whether a username was entered.
         Node loginButton = dialog.getDialogPane().lookupButton(loginButtonType);
         loginButton.setDisable(true);
 
-// Do some validation (using the Java 8 lambda syntax).
+        // Do some validation (using the Java 8 lambda syntax).
         username.textProperty().addListener((observable, oldValue, newValue) -> {
             loginButton.setDisable(newValue.trim().isEmpty());
         });
 
         dialog.getDialogPane().setContent(grid);
 
-// Request focus on the username field by default.
+        // Request focus on the username field by default.
         Platform.runLater(username::requestFocus);
 
-// Convert the result to a username-password-pair when the loginBtn button is clicked.
+        // Convert the result to a username-password-pair when the loginBtn button is clicked.
         dialog.setResultConverter(dialogButton -> {
             if (dialogButton == loginButtonType) {
+//                loginUser();
+            } else {
+//                return null;
                 return new Pair<>(username.getText(), password.getText());
             }
             return null;
@@ -128,8 +156,10 @@ public class Client extends Application {
         Optional<Pair<String, String>> result = dialog.showAndWait();
 
         result.ifPresent(usernamePassword -> {
-            System.out.println("Username=" + usernamePassword.getKey() + ", Password=" + usernamePassword.getValue());
+            new Thread(new LoginThread(Server.getUserList(), usernamePassword)).start();
         });
+
+
     }
 
     private void logoffDialog() {
@@ -139,12 +169,30 @@ public class Client extends Application {
 //        alert.setContentText("Are you ok with this?");
 
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == ButtonType.OK){
+        if (result.get() == ButtonType.OK) {
             // ... user chose OK
-            System.out.println("Logging you off...");
-        } else {
+            try {
+                System.out.println("Logging you off...");
+                serverCommThread.stop();
+                loggedIn = false;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.printf("You are now logged off. [login=%b]%n", loggedIn);
+        }
+        else {
             // ... user chose CANCEL or closed the dialog
         }
+    }
+
+    private void loginUser() {
+        if (!loggedIn) {
+            new Thread(serverCommThread = new ClientCommunicationThread(this, host, port)).start();
+            loggedIn = true;
+        } else {
+            System.err.println("Warning: The server comms thread is already running!");
+        }
+
     }
 }
 
