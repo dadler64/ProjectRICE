@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.adlerd.project-rice</groupId>
     <artifactId>project-rice</artifactId>
-    <packaging>bundle</packaging>
+    <packaging>pom</packaging>
     <name>ProjectRICE</name>
     <version>1.0.0</version>
     <description>Real-time Interactive Collaborative Editor</description>
@@ -13,6 +13,10 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+    <modules>
+        <module>ClientRICE</module>
+        <module>ServerRICE</module>
+    </modules>
     <developers>
         <developer>
             <id>adlerd</id>

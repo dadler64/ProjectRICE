@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ClientRICE/ClientRICE.iml" filepath="$PROJECT_DIR$/ClientRICE/ClientRICE.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProjectRICE.iml" filepath="$PROJECT_DIR$/ProjectRICE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServerRICE/ServerRICE.iml" filepath="$PROJECT_DIR$/ServerRICE/ServerRICE.iml" />
     </modules>
   </component>
 </project>

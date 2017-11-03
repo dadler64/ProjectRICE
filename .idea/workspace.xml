@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06a428e-7522-46f4-a821-a7083ec9427e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/client/ClientCommunicationThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/client/CredentialManager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/server/LoginThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/server/ServerCommunicationThread.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/server/ui/ServerGUI.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/server/ui/StatsPane.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/server/ui/UserPane.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/SplitOutputStream.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/Utils.java" />
+    <list default="true" id="a06a428e-7522-46f4-a821-a7083ec9427e" name="Default" comment="Added tests and examples to the project.">
+      <change beforePath="" afterPath="$PROJECT_DIR$/ClientRICE/ClientRICE.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ClientRICE/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ServerRICE/ServerRICE.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ServerRICE/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/SplitOutputStream.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/client/Client.java" afterPath="$PROJECT_DIR$/main/java/com/rice/client/Client.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/Server.java" afterPath="$PROJECT_DIR$/main/java/com/rice/server/Server.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/User.java" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/User.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/UserStatus.java" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/UserStatus.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/Command.java" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/Command.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/CommandLine.java" afterPath="$PROJECT_DIR$/main/java/com/rice/universal/CommandLine.java" />
-      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/CommandLinePane.java" afterPath="$PROJECT_DIR$/main/java/com/rice/server/ui/CommandLinePane.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/client/Client.java" afterPath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/Client.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/client/ClientCommunicationThread.java" afterPath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/client/ClientStatus.java" afterPath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientStatus.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/client/CredentialManager.java" afterPath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/CredentialManager.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/client/LoginRecord.java" afterPath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/LoginRecord.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/LoginThread.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/LoginThread.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/Server.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/Server.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/ServerCommunicationThread.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ServerCommunicationThread.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/ui/CommandLinePane.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/CommandLinePane.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/ui/ServerGUI.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/ServerGUI.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/ui/StatsPane.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/StatsPane.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/server/ui/UserPane.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/UserPane.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/Command.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/Command.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/CommandLine.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CommandLine.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/CustomException.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CustomException.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/SplitOutputStream.java" afterPath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/SplitOutputStream.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/User.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/User.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/UserStatus.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/UserStatus.java" />
+      <change beforePath="$PROJECT_DIR$/main/java/com/rice/universal/Utils.java" afterPath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/Utilties.java" />
+      <change beforePath="$PROJECT_DIR$/main/resources/RICE Graphics.sketch" afterPath="$PROJECT_DIR$/ClientRICE/src/main/resources/RICE Graphics.sketch" />
+      <change beforePath="$PROJECT_DIR$/main/resources/SavedInfo.json" afterPath="$PROJECT_DIR$/ClientRICE/src/main/resources/SavedInfo.json" />
+      <change beforePath="$PROJECT_DIR$/main/resources/Users.json" afterPath="$PROJECT_DIR$/ServerRICE/src/main/resources/Users.json" />
+      <change beforePath="$PROJECT_DIR$/main/resources/java-syntax.css" afterPath="$PROJECT_DIR$/ClientRICE/src/main/resources/java-syntax.css" />
+      <change beforePath="$PROJECT_DIR$/main/resources/login.png" afterPath="$PROJECT_DIR$/ClientRICE/src/main/resources/login.png" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/test/java/chat/ChatClient.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/java/chat/ChatServer.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/java/chat/Protocol.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/java/chat/Status.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTest.java" afterPath="$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTest.java" />
+      <change beforePath="$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTest.java" afterPath="$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/CredentialManagerTest.java" />
+      <change beforePath="$PROJECT_DIR$/test/java/com/rice/client/LoginRecordJsonTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/java/examples/osxconsole/ConsoleTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/java/examples/osxconsole/OSXConsole.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/java/gson/examples/e2/Task.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/java/gson/examples/e2/TaskTest.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/test/java/gson/examples/user/UserTest.java" afterPath="" />
@@ -31,6 +51,8 @@
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/SimpleJSON/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/ClientRICE/target/" />
+    <ignored path="$PROJECT_DIR$/ServerRICE/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,44 +75,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClientCommunicationThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/java/com/rice/client/ClientCommunicationThread.java">
+      <file leaf-file-name="ConsoleTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/java/examples/osxconsole/ConsoleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="89" column="21" lean-forward="true" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CPULoadTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/java/examples/CPULoadTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CredentialManagerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/CredentialManagerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CustomException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CommandLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2550">
+              <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
               <folding>
-                <element signature="method#ClientCommunicationThread#1;class#ClientCommunicationThread#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="class#2596:3140" expanded="false" />
+                <element signature="class#4180:5965" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerCommunicationThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/ServerCommunicationThread.java">
+      <file leaf-file-name="CommandLinePane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/CommandLinePane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerGUI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/ServerGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-519">
+              <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/Command.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/java/examples/chat/ChatClient.java">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="136">
+              <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CredentialManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/java/com/rice/client/CredentialManager.java">
+      <file leaf-file-name="SplitOutputStream.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/SplitOutputStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,6 +202,7 @@
         <option value="Dan Adler &lt;daadler64@gmail.com&gt;" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -124,23 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/java/com/rice/client/LoginRecordJsonTest.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/LoginRecord.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/ClientStatus.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/SendMessageThread.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/test/resources/java-keywords.css" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/ServerCommunicationThread.java" />
-        <option value="$PROJECT_DIR$/main/resources/border_style.css" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/BorderedTilePane.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/BorderedTitledPane.java" />
-        <option value="$PROJECT_DIR$/main/resources/boarder-style.css" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/NetworkThread.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/SplitOutoutStream.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/ServerThread.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/GUIServerThread.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/threads/NetworkThread.java" />
-        <option value="$PROJECT_DIR$/test/java/examples/Main.java" />
         <option value="$PROJECT_DIR$/test/java/examples/ConsoleRedirect.java" />
         <option value="$PROJECT_DIR$/main/java/com/rice/server/threads/GUIServerThread.java" />
         <option value="$PROJECT_DIR$/main/java/com/rice/universal/Command.java" />
@@ -175,6 +247,23 @@
         <option value="$PROJECT_DIR$/main/java/com/rice/client/Client.java" />
         <option value="$PROJECT_DIR$/main/java/com/rice/server/ui/ServerGUI.java" />
         <option value="$PROJECT_DIR$/main/java/com/rice/client/ClientCommunicationThread.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/ui/CommandLine.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/CommandLine.java" />
+        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/SplitOutputStream.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/Utils/Utils.java" />
+        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/Client.java" />
+        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/SplitOutputStream.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/UserStatus.java" />
+        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/CredentialManager.java" />
+        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java" />
+        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/Client.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/CredentialManagerTest.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CustomException.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/Server.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/SplitOutputStream.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CommandLine.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/CommandLinePane.java" />
+        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/ServerGUI.java" />
       </list>
     </option>
   </component>
@@ -212,11 +301,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1280" />
     <option name="y" value="22" />
-    <option name="width" value="960" />
-    <option name="height" value="1142" />
+    <option name="width" value="1280" />
+    <option name="height" value="1381" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -337,17 +426,34 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -355,6 +461,8 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -363,6 +471,8 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -372,6 +482,66 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="rice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -381,6 +551,8 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -391,32 +563,43 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="universal" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -424,6 +607,8 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -432,6 +617,8 @@
             <path>
               <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
@@ -471,12 +658,13 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/java" />
+      <recent name="$PROJECT_DIR$/ServerRICE/src/test" />
+      <recent name="$PROJECT_DIR$/ServerRICE/src/main/resources" />
+      <recent name="$PROJECT_DIR$/ClientRICE/src/main/resources" />
       <recent name="$PROJECT_DIR$/examples" />
-      <recent name="$PROJECT_DIR$/main/resources" />
-      <recent name="$PROJECT_DIR$/main" />
-      <recent name="$PROJECT_DIR$/res" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="com.rice.server" />
       <recent name="com.rice.client" />
     </key>
@@ -485,9 +673,122 @@
       <recent name="$PROJECT_DIR$/test/java/chat" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.rice.client" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/README.md</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -501,7 +802,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CredentialManagerTestCase">
+  <component name="RunManager" selected="JUnit.CredentialManagerTest (1)">
     <configuration name="Client - RICE" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.rice.client.Client" />
@@ -513,7 +814,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectRICE" />
+      <module name="ClientRICE" />
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -534,7 +835,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectRICE" />
+      <module name="ServerRICE" />
       <envs />
     </configuration>
     <configuration name="Server [-t] - RICE" type="Application" factoryName="Application">
@@ -553,8 +854,33 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ProjectRICE" />
+      <module name="ServerRICE" />
       <envs />
+    </configuration>
+    <configuration name="CredentialManagerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.rice.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ServerRICE" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.rice.client" />
+      <option name="MAIN_CLASS_NAME" value="com.rice.client.CredentialManagerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="CredentialManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -606,31 +932,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LoginRecordJsonTest.toJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.rice.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ProjectRICE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rice.client" />
-      <option name="MAIN_CLASS_NAME" value="com.rice.client.LoginRecordJsonTest" />
-      <option name="METHOD_NAME" value="toJson" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -651,16 +952,16 @@
       <item index="1" class="java.lang.String" itemvalue="Application.Client - RICE" />
       <item index="2" class="java.lang.String" itemvalue="Application.Server - RICE" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.CredentialManagerTestCase" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LoginRecordJsonTest.toJson" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest.testCreds" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest.testCreds" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CredentialManagerTestCase" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest (1)" />
         <item index="1" class="java.lang.String" itemvalue="Application.Client - RICE" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Server - RICE" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest.testCreds" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LoginRecordJsonTest.toJson" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CredentialManagerTestCase" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Server - RICE" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest.testCreds" />
       </list>
     </recent_temporary>
   </component>
@@ -702,7 +1003,7 @@
       <workItem from="1509570750886" duration="3716000" />
       <workItem from="1509585975099" duration="511000" />
       <workItem from="1509586507543" duration="234000" />
-      <workItem from="1509586823346" duration="15258000" />
+      <workItem from="1509586823346" duration="16624000" />
     </task>
     <task id="LOCAL-00001" summary="Converted project int a Maven project. On a side note Zach this is an example of how to pronounce 'Maven':&#10;https://www.youtube.com/watch?v=QWAbNiKfVhA">
       <created>1509052219092</created>
@@ -775,11 +1076,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116001000" />
+    <option name="totallyTimeSpent" value="117367000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="22" width="1915" height="1142" extended-state="6" />
-    <editor active="true" />
+    <frame x="1280" y="22" width="1280" height="1381" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -789,9 +1089,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39746094" sideWeight="0.31744748" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5210166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5209818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19273892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29159936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -861,16 +1161,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/main/java/com/rice/server/LoginThread.java</url>
-          <line>10</line>
+          <url>file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/LoginThread.java</url>
+          <line>8</line>
           <properties field="userList" class="com.rice.server.LoginThread" />
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/main/java/com/rice/client/Client.java</url>
-          <line>158</line>
-          <properties />
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="22" />
@@ -882,65 +1176,7 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/resources/java-keywords.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/resources/boarder-style.css" />
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/universal/BorderedTitledPane.java" />
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/universal/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/ui/UserPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#865#866#0" expanded="false" />
-            <element signature="e#922#923#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.graphics/javafx/scene/layout/GridPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="986" column="16" lean-forward="false" selection-start-line="986" selection-start-column="16" selection-end-line="986" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.controls/javafx/scene/control/ProgressBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="71" column="11" lean-forward="false" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/ui/StatsPane.java">
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/StatsPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
@@ -955,15 +1191,283 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/threads/GUIServerThread.java" />
-    <entry file="file://$PROJECT_DIR$/main/resources/java-syntax.css">
+    <entry file="file://$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTestTest.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.base/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="279">
+          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <folding>
+            <element signature="e#23019#23020#0" expanded="false" />
+            <element signature="e#23059#23060#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTestTest.java" />
+    <entry file="file://$PROJECT_DIR$/test/java/examples/JavaKeywordsAsync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/examples/ConsoleRedirect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/resources/UsersUpdated.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="275" lean-forward="true" selection-start-line="0" selection-start-column="213" selection-end-line="0" selection-end-column="275" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/examples/JavaKeywords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/CredentialManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/com/rice/universal/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.2/gson-2.8.2-sources.jar!/com/google/gson/reflect/TypeToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#3315#3316#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.2/gson-2.8.2-sources.jar!/com/google/gson/Gson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="797" column="0" lean-forward="false" selection-start-line="797" selection-start-column="0" selection-end-line="797" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="274" column="25" lean-forward="true" selection-start-line="274" selection-start-column="25" selection-end-line="274" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/Utilties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/LoginRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/SplitOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/LoginThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ServerCommunicationThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/UserStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/resources/login.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/resources/SavedInfo.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="57" lean-forward="false" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/resources/java-syntax.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/resources/Users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="275" lean-forward="false" selection-start-line="0" selection-start-column="275" selection-end-line="0" selection-end-column="275" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="method#ClientCommunicationThread#1;class#ClientCommunicationThread#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/CredentialManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <marker date="1509668137592" expanded="false" signature="160:191" ph="/Duplicates/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/java/examples/chat/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/examples/chat/Protocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/examples/chat/ChatClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/examples/chat/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/examples/gson/examples/e2/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1003,75 +1507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/examples/gson/examples/e2/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/java.base/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
-          <folding>
-            <element signature="e#23019#23020#0" expanded="false" />
-            <element signature="e#23059#23060#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/resources/SavedInfo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="57" lean-forward="true" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/ui/CommandLinePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="81" column="17" lean-forward="true" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/examples/chat/Protocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/examples/chat/ChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/examples/JavaKeywordsAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/examples/ConsoleRedirect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/java/examples/CPULoadTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1080,209 +1515,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/resources/UsersUpdated.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="275" lean-forward="true" selection-start-line="0" selection-start-column="213" selection-end-line="0" selection-end-column="275" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/resources/Users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="275" lean-forward="false" selection-start-line="0" selection-start-column="275" selection-end-line="0" selection-end-column="275" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/examples/JavaKeywords.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/universal/UserStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/universal/CommandLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1046">
-          <caret line="193" column="27" lean-forward="false" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
-          <folding>
-            <element signature="class#2558:3102" expanded="false" />
-            <element signature="class#4142:5927" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/universal/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/com/rice/universal/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/universal/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.2/gson-2.8.2-sources.jar!/com/google/gson/reflect/TypeToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding>
-            <element signature="e#3315#3316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.2/gson-2.8.2-sources.jar!/com/google/gson/Gson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="797" column="0" lean-forward="false" selection-start-line="797" selection-start-column="0" selection-end-line="797" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/universal/SplitOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="274" column="25" lean-forward="true" selection-start-line="274" selection-start-column="25" selection-end-line="274" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="78" column="47" lean-forward="false" selection-start-line="78" selection-start-column="47" selection-end-line="78" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4752#4753#0" expanded="true" />
-            <element signature="e#4783#4784#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/com/rice/client/LoginRecordJsonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/ui/ServerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="97" column="4" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/LoginThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="12" column="79" lean-forward="true" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="175" column="40" lean-forward="true" selection-start-line="175" selection-start-column="40" selection-end-line="175" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/server/ServerCommunicationThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/client/ClientCommunicationThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="89" column="21" lean-forward="true" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-          <folding>
-            <element signature="method#ClientCommunicationThread#1;class#ClientCommunicationThread#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/examples/chat/ChatClient.java">
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/CredentialManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/java/com/rice/client/CredentialManager.java">
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/LoginRecordJsonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CustomException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/SplitOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CommandLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#2596:3140" expanded="false" />
+            <element signature="class#4180:5965" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/CommandLinePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/ServerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-519">
+          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
           <folding />
         </state>
       </provider>
