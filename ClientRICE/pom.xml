@@ -6,13 +6,14 @@
     <parent>
         <artifactId>project-rice</artifactId>
         <groupId>com.adlerd.project-rice</groupId>
-        <version>1.0.0</version>
+        <version>1.0.0-alpha</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>client-rice</artifactId>
 
     <properties>
+        <ReleaseDir>${project.build.directory}/release/</ReleaseDir>
         <Main>com.rice.client.Client</Main>
         <WindowsIcon>src/main/resources/RiceBowl.ico</WindowsIcon>
         <MacOSIcon>src/main/resources/RiceBowl.icns</MacOSIcon>
@@ -71,7 +72,7 @@
                         <configuration>
                             <headerType>gui</headerType>
                             <jar>${project.build.directory}/${artifactId}-${version}-shaded.jar</jar>
-                            <outfile>${project.build.directory}/RICE_Server-${version}.exe</outfile>
+                            <outfile>${project.build.directory}/client-rice-${version}.exe</outfile>
                             <downloadUrl>http://java.com/download</downloadUrl>
                             <classPath>
                                 <mainClass>${Main}</mainClass>
@@ -92,7 +93,7 @@
                                 <productName>${project.name}</productName>
                                 <companyName>com.adlerd</companyName>
                                 <internalName>ClientRICE</internalName>
-                                <originalFilename>RICE_Client-${version}.exe</originalFilename>
+                                <originalFilename>client-rice-${version}.exe</originalFilename>
                             </versionInfo>
                         </configuration>
                     </execution>

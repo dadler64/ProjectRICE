@@ -4,19 +4,30 @@
     <artifactId>project-rice</artifactId>
     <packaging>pom</packaging>
     <name>ProjectRICE</name>
-    <version>1.0.0</version>
+    <version>1.0.0-alpha</version>
     <description>Real-time Interactive Collaborative Editor</description>
     <url>https://github.com/dadler64/ProjectRICE</url>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
+
     <modules>
         <module>ClientRICE</module>
         <module>ServerRICE</module>
     </modules>
+
+
     <developers>
         <developer>
             <id>adlerd</id>
@@ -44,9 +55,6 @@
         </developer>
     </developers>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -66,24 +74,27 @@
         </dependency>
     </dependencies>
 
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.3.6</version>
+                <version>3.3.0</version>
                 <extensions>true</extensions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.7.0</version>
                 <configuration>
-                    <source>1.9</source>
-                    <target>1.9</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+
 </project>
 

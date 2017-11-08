@@ -6,7 +6,7 @@
     <parent>
         <artifactId>project-rice</artifactId>
         <groupId>com.adlerd.project-rice</groupId>
-        <version>1.0.0</version>
+        <version>1.0.0-alpha</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -68,8 +68,8 @@
                     </goals>
                     <configuration>
                         <headerType>gui</headerType>
-                        <jar>${project.build.directory}/${artifactId}-${version}-shaded.jar</jar>
-                        <outfile>${project.build.directory}/RICE_Server-${version}.exe</outfile>
+                        <jar>${project.build.directory}/release/${artifactId}-${version}-shaded.jar</jar>
+                        <outfile>${project.build.directory}/release/server-rice-${version}.exe</outfile>
                         <downloadUrl>http://java.com/download</downloadUrl>
                         <classPath>
                             <mainClass>${Main}</mainClass>
@@ -90,7 +90,7 @@
                             <productName>${project.name}</productName>
                             <companyName>com.adlerd</companyName>
                             <internalName>ServerRICE</internalName>
-                            <originalFilename>RICE_Server-${version}.exe</originalFilename>
+                            <originalFilename>server-rice-${version}.exe</originalFilename>
                         </versionInfo>
                     </configuration>
                 </execution>
