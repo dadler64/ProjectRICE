@@ -11,11 +11,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ClientRICE" target="1.9" />
+      <module name="AppBundler" target="1.6" />
+      <module name="ClientRICE" target="1.8" />
       <module name="project-rice (1)" target="1.9" />
       <module name="project-rice (2)" target="1.9" />
       <module name="ProjectRICE" target="1.9" />
-      <module name="ServerRICE" target="1.9" />
+      <module name="ServerRICE" target="1.8" />
       <module name="SimpleJSON" target="1.9" />
     </bytecodeTargetLevel>
   </component>
