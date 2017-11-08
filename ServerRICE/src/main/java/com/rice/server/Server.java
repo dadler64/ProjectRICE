@@ -40,32 +40,41 @@ public class Server {
     public static boolean GUI = true;
 
     public static void main(String... args) {
-        // Set up split output stream
-        try {
-            final File logFile = new File("out.log");
-            if (!logFile.exists()) {
-                logFile.createNewFile();
-            }
-            final FileOutputStream fileOutputStream = new FileOutputStream(logFile);
-            final SplitOutputStream splitOutputStream = new SplitOutputStream(System.out, fileOutputStream);
-            final PrintStream printStream = new PrintStream(splitOutputStream);
-            System.setOut(printStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        String str1 = "";
+//        String str1 = "";
         if (args.length > 0) {
-            if (args[0].equalsIgnoreCase("-t")) {
-                GUI = false;
-                if (args.length > 2 && args[1].equalsIgnoreCase("-s")) {
-                    str1 = args[2];
+            // Iterate through every argument
+            for (int index = 0; index < args.length; index++) {
+                // Terminal Mode
+                if (args[index].equalsIgnoreCase("-t")) {
+                    GUI = false;
                 }
-            }
-            if (args[0].equalsIgnoreCase("-h")) {
-                System.out.println("Usage: Server [-t]");
-                System.out.println("-t : start in command-line mode");
-                return;
+                // Logging Mode
+                if (args[index].equalsIgnoreCase("-l")) {
+                    String logFileName = "out.log";
+                    if (args.length == 2) {
+                        logFileName = args[1];
+                    }
+                    // Set up split output stream
+                    try {
+                        final File logFile = new File(logFileName);
+                        if (!logFile.exists()) {
+                            logFile.createNewFile();
+                        }
+                        final FileOutputStream fileOutputStream = new FileOutputStream(logFile);
+                        final SplitOutputStream splitOutputStream = new SplitOutputStream(System.out, fileOutputStream);
+                        final PrintStream printStream = new PrintStream(splitOutputStream);
+                        System.setOut(printStream);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                // Show Help
+                if (args[index].equalsIgnoreCase("-h")) {
+                    System.out.println("Usage: Server [-t]");
+                    System.out.println("-t : start in command-line mode");
+                    return;
+                }
             }
         }
         // Load users
