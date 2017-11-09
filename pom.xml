@@ -2,8 +2,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.adlerd.project-rice</groupId>
     <artifactId>project-rice</artifactId>
+    <name>Project RICE</name>
     <packaging>pom</packaging>
-    <name>ProjectRICE</name>
     <version>1.0.0-alpha</version>
     <description>Real-time Interactive Collaborative Editor</description>
     <url>https://github.com/dadler64/ProjectRICE</url>
@@ -23,8 +23,8 @@
 
 
     <modules>
-        <module>ClientRICE</module>
-        <module>ServerRICE</module>
+        <module>client-rice</module>
+        <module>server-rice</module>
     </modules>
 
 

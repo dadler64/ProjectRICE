@@ -1,26 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06a428e-7522-46f4-a821-a7083ec9427e" name="Default" comment="Added tests and examples to the project.">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java" afterPath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/test/java/chat/ChatClient.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/chat/ChatServer.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/chat/Protocol.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/chat/Status.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/com/rice/client/LoginRecordJsonTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/gson/examples/e2/Task.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/gson/examples/e2/TaskTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/java/gson/examples/user/UserTest.java" afterPath="" />
+    <list default="true" id="4425a0df-bc80-42d5-a0ac-4820efeec9d2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/RICE Graphics.sketch" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ClientCommunicationThread.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/Apache.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/description.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_osgi_core_6_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/project-template.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/resources/RICE Graphics.sketch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/chat/ChatClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/chat/ChatServer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/chat/Protocol.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/chat/Status.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/com/rice/client/LoginRecordJsonTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/gson/examples/e2/Task.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/gson/examples/e2/TaskTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/java/gson/examples/user/UserTest.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/ClientRICE.iml" afterPath="$PROJECT_DIR$/client-rice/client-rice.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/pom.xml" afterPath="$PROJECT_DIR$/client-rice/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/Client.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientStatus.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ClientStatus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/CredentialManager.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/CredentialManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/LoginRecord.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/LoginRecord.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/SplitOutputStream.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/SplitOutputStream.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/resources/RiceBowl.icns" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/RiceBowl.icns" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/resources/RiceBowl.ico" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/RiceBowl.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/resources/SavedInfo.json" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/SavedInfo.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/resources/java-syntax.css" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/java-syntax.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClientRICE/src/main/resources/login.png" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/login.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ProjectRICE.iml" afterPath="$PROJECT_DIR$/project-rice.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/ServerRICE.iml" afterPath="$PROJECT_DIR$/server-rice/server-rice.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/pom.xml" afterPath="$PROJECT_DIR$/server-rice/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/LoginThread.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/LoginThread.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/Server.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ServerCommunicationThread.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/User.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/UserStatus.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/UserStatus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/CommandLinePane.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/CommandLinePane.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/ServerGUI.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/ServerGUI.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/StatsPane.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/StatsPane.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/UserPane.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/UserPane.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/Command.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/utils/Command.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CommandLine.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/utils/CommandLine.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CustomException.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/utils/CustomException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/SplitOutputStream.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/utils/SplitOutputStream.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/Utilties.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/utils/Utilties.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/resources/RiceBowl.icns" afterPath="$PROJECT_DIR$/server-rice/src/main/resources/RiceBowl.icns" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/resources/RiceBowl.ico" afterPath="$PROJECT_DIR$/server-rice/src/main/resources/RiceBowl.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/main/resources/Users.json" afterPath="$PROJECT_DIR$/server-rice/src/main/resources/Users.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/CredentialManagerTest.java" afterPath="$PROJECT_DIR$/server-rice/src/test/java/com/rice/client/CredentialManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/SimpleJSON/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/ClientRICE/target/" />
-    <ignored path="$PROJECT_DIR$/ServerRICE/target/" />
-    <ignored path="$PROJECT_DIR$/AppBundler/target/" />
+    <ignored path="$PROJECT_DIR$/client-rice/target/" />
+    <ignored path="$PROJECT_DIR$/server-rice/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,122 +72,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ProjectRICE$Main.coverage" NAME="Main Coverage Results" MODIFIED="1509291376109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/ProjectRICE$Client___RICE.coverage" NAME="Client - RICE Coverage Results" MODIFIED="1509307313231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/ProjectRICE$Server___RICE.coverage" NAME="Server - RICE Coverage Results" MODIFIED="1509584000782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.rice.server.threads.*</FILTER>
-    </SUITE>
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
-    <select />
-  </component>
-  <component name="FileColors">
-    <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
-    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
-    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
-    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
-  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ClientRICE/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServerRICE/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="74" column="58" lean-forward="false" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="license.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/license.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="204">
-                <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="JavaFXApplication" />
-        <option value="JUnit5 Test Class" />
-        <option value="Class" />
-      </list>
-    </option>
+    <leaf />
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Dan Adler &lt;daadler64@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/Desktop/RedPowerRevived" value="1481340990000" />
+        <entry key="$USER_HOME$/Desktop/forge-1.11-13.19.1.2189-mdk" value="1481340990000" />
+        <entry key="$USER_HOME$/Downloads/forge-1.11-13.19.1.2189-mdk" value="1481340990000" />
+        <entry key="$PROJECT_DIR$/../GolfSimGDX" value="2945525000000" />
+        <entry key="$PROJECT_DIR$/../ProjectRed" value="1486149162000" />
+      </map>
+    </option>
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -151,57 +95,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/CommandLinePane.java" />
-        <option value="$PROJECT_DIR$/test/java/examples/JavaKeywords.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/ServerGUI.java" />
-        <option value="$PROJECT_DIR$/test/java/examples/CPULoadTest.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/ui/StatsPane.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/UserStatus.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/threads/ServerCommunicationThread.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/ServerCommunicationThread.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/CrdentialManager.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTestTest.java" />
-        <option value="$PROJECT_DIR$/test/java/examples/examples/CPULoadTest.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/ui/CommandLinePane.java" />
-        <option value="$PROJECT_DIR$/main/resources/SavedInfo.json" />
-        <option value="$PROJECT_DIR$/test/java/examples/chat/Protocol.java" />
-        <option value="$PROJECT_DIR$/test/java/examples/chat/ChatServer.java" />
-        <option value="$PROJECT_DIR$/test/java/examples/JavaKeywordsAsync.java" />
-        <option value="$PROJECT_DIR$/main/resources/Users.json" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/Utils.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/CommandLine.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/universal/User.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/CredentialManager.java" />
-        <option value="$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTestCase.java" />
-        <option value="$PROJECT_DIR$/test/java/com/rice/universal/UserTest.java" />
-        <option value="$PROJECT_DIR$/test/java/com/rice/client/CredentialManagerTest.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/LoginThread.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/Server.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/Client.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/server/ui/ServerGUI.java" />
-        <option value="$PROJECT_DIR$/main/java/com/rice/client/ClientCommunicationThread.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/ui/CommandLine.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/CommandLine.java" />
-        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/SplitOutputStream.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/Utils/Utils.java" />
-        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/Client.java" />
-        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/SplitOutputStream.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/UserStatus.java" />
-        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/CredentialManager.java" />
-        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/Client.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/test/java/com/rice/client/CredentialManagerTest.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CustomException.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/SplitOutputStream.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/utils/CommandLine.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/CommandLinePane.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/ui/ServerGUI.java" />
-        <option value="$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/Server.java" />
-        <option value="$PROJECT_DIR$/ServerRICE/pom.xml" />
-        <option value="$PROJECT_DIR$/ClientRICE/pom.xml" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/server-rice/pom.xml" />
+        <option value="$PROJECT_DIR$/client-rice/pom.xml" />
       </list>
     </option>
   </component>
@@ -212,11 +108,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="/usr/local/Cellar/maven/3.5.0/libexec" />
-      </MavenGeneralSettings>
-    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -225,26 +116,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="client-rice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="client-rice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="server-rice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="server-rice" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -262,87 +134,44 @@
             <id />
           </State>
           <State>
-            <id>Android &gt; Lint &gt; Correctness</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Usability</id>
-          </State>
-          <State>
-            <id>Android Lint for Kotlin</id>
-          </State>
-          <State>
-            <id>CSS</id>
-          </State>
-          <State>
             <id>Class structureJava</id>
           </State>
           <State>
-            <id>Code quality toolsCSS</id>
+            <id>Code maturity issuesJava</id>
           </State>
           <State>
-            <id>Code quality toolsJavaScript</id>
-          </State>
-          <State>
-            <id>CodeSpring CoreSpring</id>
-          </State>
-          <State>
-            <id>Declaration redundancyJava</id>
-          </State>
-          <State>
-            <id>Dependency issuesJava</id>
-          </State>
-          <State>
-            <id>General</id>
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>GeneralScala</id>
+            <id>Google Web Toolkit issues</id>
           </State>
           <State>
             <id>Java</id>
           </State>
           <State>
-            <id>Java 8Java language level migration aidsJava</id>
-          </State>
-          <State>
             <id>Java language level migration aidsJava</id>
           </State>
           <State>
-            <id>JavaScript</id>
+            <id>Javadoc issuesJava</id>
           </State>
           <State>
-            <id>Modularization issuesJava</id>
-          </State>
-          <State>
-            <id>Packaging issuesJava</id>
-          </State>
-          <State>
-            <id>Pattern Validation</id>
-          </State>
-          <State>
-            <id>Scala</id>
-          </State>
-          <State>
-            <id>Serialization issuesJava</id>
+            <id>Performance issuesJava</id>
           </State>
           <State>
             <id>Spring</id>
           </State>
           <State>
-            <id>Spring CoreSpring</id>
+            <id>Spring AOPSpring</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
           </State>
           <State>
             <id>Threading issuesJava</id>
           </State>
-          <State>
-            <id>Web Services</id>
-          </State>
-          <State>
-            <id>XML</id>
-          </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -362,129 +191,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -492,154 +244,114 @@
               <item name="rice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="rice" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRICE" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="rice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15136719" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JAVA" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/adlerd/workspace/IdeaProjects/ProjectRICE/main/java/com/rice/client/LoginRecord.java" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.rice.universal" />
-      <recent name="com.rice.client" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ClientRICE/src/main/resources" />
-      <recent name="$PROJECT_DIR$/test/java" />
-      <recent name="$PROJECT_DIR$/ServerRICE/src/test" />
-      <recent name="$PROJECT_DIR$/ServerRICE/src/main/resources" />
-      <recent name="$PROJECT_DIR$/examples" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ServerRICE/src/main/resources" />
-      <recent name="$PROJECT_DIR$/ClientRICE/src/main/resources" />
-      <recent name="$PROJECT_DIR$/AppBundler" />
-      <recent name="$PROJECT_DIR$/main/resources" />
-      <recent name="$PROJECT_DIR$/test/java/chat" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-      <recent name="com.rice.server" />
-      <recent name="com.rice.client" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.rice.client" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -653,69 +365,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Bash.build.sh">
-    <configuration name="Client - RICE" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.rice.client.Client" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ClientRICE" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-    </configuration>
-    <configuration name="Server [-t] - RICE" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.rice.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.rice.server.Server" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-t" />
-      <option name="WORKING_DIRECTORY" value="file://%MODULE_WORKING_DIR%" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ServerRICE" />
-      <envs />
-    </configuration>
-    <configuration name="build.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/sh" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AppBundler" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AppBundler/build.sh" />
-      <option name="PARAMETERS" value="" />
-      <module name="AppBundler" />
-      <envs />
-    </configuration>
-    <configuration name="CredentialManagerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.rice.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ServerRICE" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.rice.client" />
-      <option name="MAIN_CLASS_NAME" value="com.rice.client.CredentialManagerTest" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -724,289 +386,54 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="client-rice [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/ClientRICE" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-    </configuration>
-    <configuration name="client-rice [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="package" />
-              </list>
-            </option>
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/ClientRICE" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Application.Server [-t] - RICE" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Client - RICE" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Maven.client-rice [clean]" />
-      <item index="4" class="java.lang.String" itemvalue="Maven.client-rice [package]" />
-      <item index="5" class="java.lang.String" itemvalue="Bash.build.sh" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Bash.build.sh" />
-        <item index="1" class="java.lang.String" itemvalue="Maven.client-rice [package]" />
-        <item index="2" class="java.lang.String" itemvalue="Maven.client-rice [clean]" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Client - RICE" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CredentialManagerTest (1)" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a06a428e-7522-46f4-a821-a7083ec9427e" name="Default" comment="" />
-      <created>1509036690438</created>
+      <changelist id="4425a0df-bc80-42d5-a0ac-4820efeec9d2" name="Default" comment="" />
+      <created>1510189147289</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1509036690438</updated>
-      <workItem from="1509036691673" duration="3629000" />
-      <workItem from="1509045800757" duration="5105000" />
-      <workItem from="1509051511896" duration="229000" />
-      <workItem from="1509051757166" duration="473000" />
-      <workItem from="1509052246655" duration="10825000" />
-      <workItem from="1509106136681" duration="1829000" />
-      <workItem from="1509124094474" duration="6780000" />
-      <workItem from="1509215118141" duration="15197000" />
-      <workItem from="1509305884488" duration="17143000" />
-      <workItem from="1509365382892" duration="2956000" />
-      <workItem from="1509370715956" duration="204000" />
-      <workItem from="1509452111964" duration="22472000" />
-      <workItem from="1509538075765" duration="1302000" />
-      <workItem from="1509539404539" duration="1189000" />
-      <workItem from="1509545578565" duration="238000" />
-      <workItem from="1509545822727" duration="521000" />
-      <workItem from="1509554972236" duration="6190000" />
-      <workItem from="1509570750886" duration="3716000" />
-      <workItem from="1509585975099" duration="511000" />
-      <workItem from="1509586507543" duration="234000" />
-      <workItem from="1509586823346" duration="17432000" />
-      <workItem from="1510164141837" duration="2540000" />
-      <workItem from="1510168812543" duration="495000" />
-      <workItem from="1510172626372" duration="1971000" />
+      <updated>1510189147289</updated>
+      <workItem from="1510189148440" duration="1229000" />
     </task>
-    <task id="LOCAL-00001" summary="Converted project int a Maven project. On a side note Zach this is an example of how to pronounce 'Maven':&#10;https://www.youtube.com/watch?v=QWAbNiKfVhA">
-      <created>1509052219092</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1509052219092</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added examples for GSON/JSON">
-      <created>1509068201733</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1509068201733</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added a basic command line to the server">
-      <created>1509068242486</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1509068242486</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Updated and modularized project">
-      <created>1509302491702</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1509302491703</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added tests and examples to the project.">
-      <created>1509302523547</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1509302523547</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Updated graphics and added icons">
-      <created>1510174396243</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1510174396243</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added command line argument option for logging to file">
-      <created>1510174471054</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1510174471054</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updated submodules to use launch4j to package Windows Executables">
-      <created>1510174595463</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1510174595463</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 17m 18s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 19m 50s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 22m 17s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 23m 24s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 24m 47s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 25m 57s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 26m 48s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 10h 27m 47s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest - 2017.11.02 at 13h 20m 00s.xml">
-      <configuration name="CredentialManagerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CredentialManagerTest_testCreds - 2017.11.02 at 10h 16m 04s.xml">
-      <configuration name="CredentialManagerTest.testCreds" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123181000" />
+    <option name="totallyTimeSpent" value="1229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="22" width="1280" height="1381" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32541567" sideWeight="0.5355412" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2358643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5209818" sideWeight="0.39256865" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5209818" sideWeight="0.60743135" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36752826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53127474" sideWeight="0.6825525" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32541567" sideWeight="0.41599354" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="117" y="145" width="1689" height="866" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49676898" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21123418" sideWeight="0.5129241" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3998045" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32714844" sideWeight="0.48296058" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="117" y="145" width="1689" height="866" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26444972" sideWeight="0.503231" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5210166" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29159936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293745" sideWeight="0.49676898" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1014,119 +441,39 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Converted project int a Maven project. On a side note Zach this is an example of how to pronounce 'Maven':&#10;https://www.youtube.com/watch?v=QWAbNiKfVhA" />
-    <MESSAGE value="Added examples for GSON/JSON" />
-    <MESSAGE value="Added a basic command line to the server" />
-    <MESSAGE value="Updated and modularized project" />
-    <MESSAGE value="Added tests and examples to the project." />
-    <MESSAGE value="Updated graphics and added icons" />
-    <MESSAGE value="Added command line argument option for logging to file" />
-    <MESSAGE value="Updated submodules to use launch4j to package Windows Executables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated submodules to use launch4j to package Windows Executables" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/LoginThread.java</url>
-          <line>8</line>
-          <properties field="userList" class="com.rice.server.LoginThread" />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="22" />
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="Server.userList" />
-      </configuration>
-    </watches-manager>
+    <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/java/com/rice/client/ClientCommunicationThread.java">
+    <entry file="file://$PROJECT_DIR$/server-rice/ServerRICE.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#ClientCommunicationThread#1;class#ClientCommunicationThread#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRICE/src/main/java/com/rice/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="60" column="27" lean-forward="false" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#5233#5234#0" expanded="false" />
-            <element signature="e#5264#5265#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/resources/RiceBowl.icns">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientRICE/src/main/resources/RiceBowl.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientRICE/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRICE/pom.xml">
+    <entry file="file://$PROJECT_DIR$/client-rice/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="74" column="58" lean-forward="false" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+        <state relative-caret-position="1445">
+          <caret line="85" column="46" lean-forward="false" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/license.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/server-rice/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="60" />
+        <state relative-caret-position="737">
+          <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1134,45 +481,8 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="Copyright.UI">
-        <settings>
-          <last-edited>Apache</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>OSGi</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>junit v4.13</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1184,7 +494,6 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>IntelliJ IDEA IU-173.3415.22</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1194,13 +503,13 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ModuleStructureConfigurable.UI">
+      <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>OSGi|ProjectRICE</last-edited>
+          <last-edited>1.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.13381743" />
               </list>
             </option>
           </splitter-proportions>
@@ -1208,7 +517,6 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.google.code.gson:gson:2.8.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1220,7 +528,6 @@
       </state>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
-          <last-edited>Apache</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1231,8 +538,5 @@
         </settings>
       </state>
     </states>
-  </component>
-  <component name="mavenExecuteGoalHistory">
-    <option value="" />
   </component>
 </project>

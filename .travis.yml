@@ -1,13 +1,13 @@
 language: java
 script: mvn package
-deploy:
-  provider: releases
-  api_key: API-Token
-  file:
-    - "ServerRICE/target/RICE_Client-1.0.0-alpha-shaded.jar"
-    - "ServerRICE/target/RICE_Client-1.0.0-alpha.exe"
-    - "ServerRICE/target/RICE_Server-1.0.0-alpha-shaded.jar"
-    - "ServerRICE/target/RICE_Server-1.0.0-alpha.exe"
-  skip_cleanup: true
-  on:
-    tags: true
+#deploy:
+#  provider: releases
+#  api_key: API-Token
+#  file:
+#    - "ServerRICE/target/RICE_Client-1.0.0-alpha-shaded.jar"
+#    - "ServerRICE/target/RICE_Client-1.0.0-alpha.exe"
+#    - "ServerRICE/target/RICE_Server-1.0.0-alpha-shaded.jar"
+#    - "ServerRICE/target/RICE_Server-1.0.0-alpha.exe"
+#  skip_cleanup: true
+#  on:
+#    tags: true
