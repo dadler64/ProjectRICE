@@ -1,11 +1,8 @@
 package com.rice.client;
 
-//import com.rice.server.Server;
-//import com.rice.universal.User;
-
 import javafx.util.Pair;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 public class ClientCommunicationThread implements Runnable {
@@ -13,94 +10,58 @@ public class ClientCommunicationThread implements Runnable {
     private Client client;
     private Socket socket;
     private boolean run = false;
-    private String host = "localhost";
-    private int port = 25000;
-    private State state;
+    private String hostname;
+    private int port;
+    private Pair<String, String> credentials;
 
     public ClientCommunicationThread(Client client, Pair<String, String> credentials) {
-        this.client = client;
+        this(client, credentials, "127.0.0.1", 25000);
     }
 
-    public ClientCommunicationThread(Client client, String host, int port) {
+    public ClientCommunicationThread(Client client, Pair<String, String> credentials, String hostname, int port) {
         this.client = client;
-        this.host = host;
+        this.credentials = credentials;
+        this.hostname = hostname;
         this.port = port;
     }
 
     @Override
     public void run() {
-        System.out.println("CLIENT COMM THREAD!");
-//        try {
-//            InetAddress address = InetAddress.getByName(host);
-//            socket = new Socket(address, port);
-//            System.out.println("Socket connection success! Running comms thread!");
-//            OutputStream os = socket.getOutputStream();
-//            OutputStreamWriter osw = new OutputStreamWriter(os);
-//            BufferedWriter bw = new BufferedWriter(osw);
+        System.out.println("Starting client communication thread!");
+        System.out.println("Client=" + client.toString());
+        System.out.println("Hostname=" + hostname);
+        System.out.println("Port=" + port);
+
+        try (
+                Socket socket = new Socket(hostname, port);
+                DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
+                DataInputStream fromServer = new DataInputStream(socket.getInputStream())
+        ) {
+            System.out.println("Socket connection success! Running communication thread thread!");
+            BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
+//            run = true;
+//            String inputLine, outputLine;
 //
-//            state = INIT;
+//            // Initiate Client protocol
+//            ClientProtocol protocol = new ClientProtocol(credentials);
+//            outputLine = protocol.processInput(null);
+//            toServer.writeUTF(outputLine);
 //
-//            while (true) {
-//                if (state == INIT) {
+//            while (run) {
+//                inputLine = fromServer.readUTF();
+//                System.out.println("Server -> " + inputLine);
 //
-//                    state = USERNAME_SENT;
-//                    // Send username
-//                }
-//
-//                /*  Check that the user exists and also check their state
-//                        - If user exists it will return 200
-//                        - If user is logged in it will return 250
-//                        - If user is blocked it will return 251
-//                */
-//                else if (state == USERNAME_SENT) {
-//                    String returnCode = "";
-//
-//
-//                    if (returnCode.equals("200")) {
-//                        state = PASSWORD_SENT;
-//                        // Send password
-//                    } else if (returnCode.equals("250")) {
-//                        System.err.println("That user is alread logged in.");
-//                    }else if (returnCode.equals("251")) {
-//                        System.err.println("The username provded does not exist.");
-//                    } else {
-//                        System.err.println("The username provded does not exist.");
-//                    }
-//                }
-//
-//                // Check that the user exists and also check their state
-//                // if okay it will return 200
-//                // If user is logged in it will return 250
-//                // is user is blocked it will return 251
-//                else if (state == PASSWORD_SENT) {
-//
-//                    state = LOGIN;
-//                }
+//                outputLine = protocol.processInput(inputLine);
 //            }
-////            socket.close();
-//        } catch (IOException e) {
-//            System.err.printf("Couldn't get I/O for the connection.%n");
-//            System.exit(1);
-//        }
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+        }
     }
 
-    void stop() throws IOException {
+    void stopThread() {
         run = false;
     }
-
-    public enum State {
-        INIT, USERNAME_SENT, PASSWORD_SENT, LOGIN
-    }
-
-//    private boolean validateUserLogin(String username, String password) {
-//        List<User> users = Server.userList;
-//        for (User u: users) {
-//            if (u.getUsername().equals(username)) {
-//                if (u.getPassword().equals(password)) {
-//                    return true;
-//                }
-//            }
-//        }
-//        return false;
-//    }
 }

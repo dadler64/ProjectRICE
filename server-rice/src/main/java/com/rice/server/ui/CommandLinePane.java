@@ -49,6 +49,8 @@ public class CommandLinePane extends TitledPane implements EventHandler<KeyEvent
         });
         this.textArea.setEditable(false);
         this.textArea.setWrapText(false);
+        this.textArea.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #000000; -fx-text-fill: #ffffff; ");
+
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(textArea);
         scrollPane.setFitToWidth(true);
@@ -70,6 +72,14 @@ public class CommandLinePane extends TitledPane implements EventHandler<KeyEvent
     private void writeToConsole(String input) {
         textArea.setText(input);
         textArea.appendText("\n");
+    }
+
+    public TextField getTextField() {
+        return textField;
+    }
+
+    public TextArea getTextArea() {
+        return textArea;
     }
 
     @Override

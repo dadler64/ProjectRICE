@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--suppress ALL -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>project-rice</artifactId>
@@ -14,9 +13,10 @@
     <name>RICE Server</name>
 
     <properties>
-        <Main>com.rice.server.Server</Main>
-        <WindowsIcon>src/main/resources/RiceBowl.ico</WindowsIcon>
-        <MacOSIcon>src/main/resources/RiceBowl.icns</MacOSIcon>
+        <main.class>com.rice.server.Server</main.class>
+        <icon.windows>src/main/resources/rice_bowl.ico</icon.windows>
+        <icon.macos>src/main/resources/rice_bowl.icns</icon.macos>
+        <java.version>1.8</java.version>
     </properties>
 
 <build>
@@ -26,8 +26,8 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.7.0</version>
             <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
+                <source>${java.version}</source>
+                <target>${java.version}</target>
             </configuration>
         </plugin>
 
@@ -49,7 +49,7 @@
                 <shadedClassifierName>shaded</shadedClassifierName>
                 <transformers>
                     <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                        <mainClass>${Main}</mainClass>
+                        <mainClass>${main.class}</mainClass>
                     </transformer>
                 </transformers>
             </configuration>
@@ -69,14 +69,14 @@
                     </goals>
                     <configuration>
                         <headerType>gui</headerType>
-                        <jar>${project.build.directory}/${artifactId}-${version}-shaded.jar</jar>
-                        <outfile>${project.build.directory}/server-rice-${version}.exe</outfile>
+                        <jar>${project.build.directory}/${project.artifactId}-${project.version}-shaded.jar</jar>
+                        <outfile>${project.build.directory}/${project.artifactId}-${project.version}.exe</outfile>
                         <downloadUrl>http://java.com/download</downloadUrl>
                         <classPath>
-                            <mainClass>${Main}</mainClass>
+                            <mainClass>${main.class}</mainClass>
                             <preCp>anything</preCp>
                         </classPath>
-                        <icon>${WindowsIcon}</icon>
+                        <icon>${icon.windows}</icon>
                         <jre>
                             <minVersion>1.8.0</minVersion>
                             <jdkPreference>preferJre</jdkPreference>
@@ -91,7 +91,7 @@
                             <productName>${project.name}</productName>
                             <companyName>com.adlerd</companyName>
                             <internalName>ServerRICE</internalName>
-                            <originalFilename>server-rice-${version}.exe</originalFilename>
+                            <originalFilename>${project.artifactId}-${project.version}.exe</originalFilename>
                         </versionInfo>
                     </configuration>
                 </execution>

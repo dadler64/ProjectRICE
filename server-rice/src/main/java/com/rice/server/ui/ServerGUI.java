@@ -1,5 +1,6 @@
 package com.rice.server.ui;
 
+import com.rice.server.ServerCommunicationThread;
 import com.rice.server.utils.CommandLine;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -11,6 +12,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.PrintStream;
 import java.lang.management.ManagementFactory;
 import java.lang.management.OperatingSystemMXBean;
 
@@ -32,6 +34,15 @@ public class ServerGUI extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
+        // Show 'System.out' in the server console
+        Console console = new Console(commandLinePane);
+        PrintStream ps = new PrintStream(console, true);
+        System.setOut(ps);
+//        System.setErr(ps);
+
+        // Disable the textField for the command line temporarily
+        commandLinePane.getTextField().setDisable(true);
 
         buttonBar.setMinHeight(50.0);
         buttonBar.setPrefHeight(50.0);
@@ -74,8 +85,8 @@ public class ServerGUI extends Application {
         btnStartServer.setOnAction(event -> {
             System.out.println("Starting RICE Server...");
             // Start the networking thread to connect to potential clients
-//            new Thread(new GUIServerThread(this.commandLine, this.commandLinePane)).start();
-            System.out.println("RICE Server successfully started.");
+            new Thread(new ServerCommunicationThread()).start();
+//            System.out.println("RICE Server successfully started.");
         });
 
         btnStopServer.setAlignment(Pos.CENTER);

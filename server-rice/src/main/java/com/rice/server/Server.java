@@ -26,16 +26,13 @@ import javafx.application.Application;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 
 public class Server {
 
     private static final BufferedReader USER_INPUT = new BufferedReader(new InputStreamReader(System.in));
     private static final CommandLine COMMAND_LINE = new CommandLine();
-    private static final String USERS_FILE_PATH = "main/resources/Users.json";
+    private static final String USERS_FILE_PATH = "Users.json";
     public static List<User> userList;
     public static boolean GUI = true;
 
@@ -78,8 +75,8 @@ public class Server {
             }
         }
         // Load users
-        getUsersFromJson(USERS_FILE_PATH);
-        System.out.printf("%d users loaded from ('%s')%n", userList.size(), USERS_FILE_PATH);
+        getUsersFromJson(Server.class.getClass().getResourceAsStream("/users.json"));
+//        System.out.printf("%d users loaded from ('%s')%n", userList.size(), USERS_FILE_PATH);
         // Determine whether to launch the GUI or terminal
         if (GUI) {
             // Launch GUI
@@ -115,49 +112,15 @@ public class Server {
         }
     }
 
-
-
-//    public static void getInput() throws IOException, CustomException {
-//        String input;
-//        while (true) {
-//            System.out.print(">> ");
-//            if ((input = USER_INPUT.readLine()) != null) {
-//
-//                if (input.equalsIgnoreCase("exit")) {
-//                    System.exit(2);
-//                }
-//
-//                COMMAND_LINE.scheduleCommand(input);
-//
-//                while (COMMAND_LINE.hasMoreCommands()) {
-//                    String command = COMMAND_LINE.getNextCommand();
-//                    System.out.printf("%s%n", COMMAND_LINE.runCommand(command));
-//                }
-//            }
-//        }
-//    }
-
     public static List<User> getUserList() {
         return userList;
     }
 
-    private static void getUsersFromJson(String path) {
-        final Path file = FileSystems.getDefault().getPath(path);
+    private static void getUsersFromJson(InputStream inputStream) {
+        final Reader reader = new InputStreamReader(inputStream);
         final Gson gson = new Gson();
-        final Type type = new TypeToken<List<User>>(){}.getType(); // TODO: Figure out why this is throwing a NullPointerException
-
-        // Read JSON file to an ArrayList
-        try{
-            final List<String> users = Files.readAllLines(file);
-//            List<User> fromJson = gson.fromJson(users.get(0), type);
-            userList = gson.fromJson(users.get(0), type);
-
-            // Add users to the static list in server
-//            for (User u: fromJson) {
-//                userList.add(u);
-//            }
-        } catch (IOException e) {
-            System.err.printf("Error: Cannot find ('%s').%n", path);
-        }
+        final Type user = new TypeToken<List<User>>() {
+        }.getType();
+        userList = gson.fromJson(reader, user);
     }
 }

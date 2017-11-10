@@ -1,38 +1,54 @@
 package com.rice.server;
 
-import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerCommunicationThread implements Runnable {
 
-    int port = 25000;
+    private int port;
+
+    public ServerCommunicationThread() {
+        this(25000);
+    }
+
+    public ServerCommunicationThread(int port) {
+        this.port = port;
+    }
 
     @Override
     public void run() {
         System.out.printf("Server Started and listening on port %d%n", port);
 
-        //Reading the message from the client
+        // Set up network connection
         try (
-                ServerSocket serverSocket = new ServerSocket(port);
-                Socket clientSocket = serverSocket.accept();
-                InputStream is = clientSocket.getInputStream();
-                InputStreamReader isr = new InputStreamReader(is);
-                BufferedReader br = new BufferedReader(isr)
+                final ServerSocket serverSocket = new ServerSocket(port);
+                final Socket clientSocket = serverSocket.accept();
+                final DataOutputStream output = new DataOutputStream(clientSocket.getOutputStream());
+                final DataInputStream input = new DataInputStream(clientSocket.getInputStream())
         ) {
             System.out.println("Server successfully connected to client.");
+//            String inputLine, outputLine;
+//
+//            // Initiate protocol
+//            ServerProtocol protocol = new ServerProtocol(Server.getUserList());
+//            outputLine = protocol.processInput(null);
+//            output.writeUTF(outputLine);
+//
+//            while (true) {
+//                inputLine = input.readUTF();
+//                System.out.println("Client -> " + inputLine);
+//
+//                outputLine = protocol.processInput(inputLine);
+//            }
+
             while (true) {
-                String fromClient;
-                if ((fromClient = br.readLine()) != null) {
-                    System.out.printf("Client: %s%n", fromClient);
-                }
+                System.out.println("Connected!");
             }
         } catch (IOException e) {
-            System.err.printf("Error: Could not find or create socket on port ('%d')%n", port);
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }

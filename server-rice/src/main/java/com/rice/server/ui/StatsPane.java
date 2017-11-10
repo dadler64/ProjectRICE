@@ -48,7 +48,7 @@ public class StatsPane extends TitledPane implements Runnable {
             try {
                 double load = os.getProcessCpuLoad();
                 cpuLoad.setProgress(load);
-                System.out.printf("CPU Load: %.1f%n", load);
+//                System.out.printf("CPU Load: %.1f%n", load);
                 Thread.sleep(updateSpeed * 1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
