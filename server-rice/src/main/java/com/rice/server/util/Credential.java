@@ -1,4 +1,4 @@
-package com.rice.server.utils;
+package com.rice.server.util;
 
 import javafx.beans.NamedArg;
 

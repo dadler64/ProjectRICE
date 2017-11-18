@@ -19,9 +19,10 @@ package com.rice.server;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.rice.server.ui.ServerGUI;
-import com.rice.server.utils.CommandLine;
-import com.rice.server.utils.CustomException;
-import com.rice.server.utils.SplitOutputStream;
+import com.rice.server.util.CommandLine;
+import com.rice.server.util.CustomException;
+import com.rice.server.util.Print;
+import com.sun.media.jfxmedia.logging.Logger;
 import javafx.application.Application;
 
 import java.io.*;
@@ -32,13 +33,13 @@ public class Server {
 
     private static final BufferedReader USER_INPUT = new BufferedReader(new InputStreamReader(System.in));
     private static final CommandLine COMMAND_LINE = new CommandLine();
-    private static final String USERS_FILE_PATH = "Users.json";
     public static List<User> userList;
     public static boolean GUI = true;
 
     public static void main(String... args) {
+        // Set up logger
+        Logger.setLevel(Logger.ERROR);
 
-//        String str1 = "";
         if (args.length > 0) {
             // Iterate through every argument
             for (int index = 0; index < args.length; index++) {
@@ -46,43 +47,23 @@ public class Server {
                 if (args[index].equalsIgnoreCase("-t")) {
                     GUI = false;
                 }
-                // Logging Mode
-                if (args[index].equalsIgnoreCase("-l")) {
-                    String logFileName = "out.log";
-                    if (args.length == 2) {
-                        logFileName = args[1];
-                    }
-                    // Set up split output stream
-                    try {
-                        final File logFile = new File(logFileName);
-                        if (!logFile.exists()) {
-                            logFile.createNewFile();
-                        }
-                        final FileOutputStream fileOutputStream = new FileOutputStream(logFile);
-                        final SplitOutputStream splitOutputStream = new SplitOutputStream(System.out, fileOutputStream);
-                        final PrintStream printStream = new PrintStream(splitOutputStream);
-                        System.setOut(printStream);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
                 // Show Help
                 if (args[index].equalsIgnoreCase("-h")) {
-                    System.out.println("Usage: Server [-t]");
-                    System.out.println("-t : start in command-line mode");
+                    Print.info("Usage: Server [-t]");
+                    Print.info("-t : start in command-line mode");
                     return;
                 }
             }
         }
         // Load users
         getUsersFromJson(Server.class.getClass().getResourceAsStream("/users.json"));
-//        System.out.printf("%d users loaded from ('%s')%n", userList.size(), USERS_FILE_PATH);
+//        Print.debug("%d users loaded from ('%s')%n", userList.size(), USERS_FILE_PATH);
         // Determine whether to launch the GUI or terminal
         if (GUI) {
             // Launch GUI
             Application.launch(ServerGUI.class);
         } else {
-            System.out.println("Non-GUI mode activated!");
+            Print.info("Non-GUI mode activated!");
             while (true) {
                 // Run the main server networking thread
             new Thread(new ServerCommunicationThread()).start();
@@ -90,18 +71,18 @@ public class Server {
 //                    getInput();
                     String input;
                     while (true) {
-                        System.out.print(">> ");
+                        Print.out(">> ");
                         if ((input = USER_INPUT.readLine()) != null) {
 
                             if (input.equalsIgnoreCase("exit")) {
-                                System.exit(2);
+                                System.exit(0);
                             }
 
                             COMMAND_LINE.scheduleCommand(input);
 
                             while (COMMAND_LINE.hasMoreCommands()) {
                                 String command = COMMAND_LINE.getNextCommand();
-                                System.out.printf("%s%n", COMMAND_LINE.runCommand(command));
+                                Print.line(COMMAND_LINE.runCommand(command));
                             }
                         }
                     }
@@ -112,15 +93,15 @@ public class Server {
         }
     }
 
-    public static List<User> getUserList() {
-        return userList;
-    }
-
     private static void getUsersFromJson(InputStream inputStream) {
         final Reader reader = new InputStreamReader(inputStream);
         final Gson gson = new Gson();
         final Type user = new TypeToken<List<User>>() {
         }.getType();
         userList = gson.fromJson(reader, user);
+    }
+
+    public static List<User> getUserList() {
+        return userList;
     }
 }

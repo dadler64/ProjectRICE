@@ -1,3 +1,5 @@
 lib/
 out.log
 /data/
+/client-rice/src/main/java/com/rice/client/ui/Icon.java
+*.log

@@ -1,5 +1,6 @@
 package com.rice.client;
 
+import com.rice.client.util.Print;
 import javafx.util.Pair;
 
 import java.io.*;
@@ -27,17 +28,17 @@ public class ClientCommunicationThread implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Starting client communication thread!");
-        System.out.println("Client=" + client.toString());
-        System.out.println("Hostname=" + hostname);
-        System.out.println("Port=" + port);
+        Print.info("Starting client communication thread!");
+        Print.debug("Client=" + client.toString());
+        Print.debug("Hostname=" + hostname);
+        Print.debug("Port=" + port);
 
         try (
                 Socket socket = new Socket(hostname, port);
                 DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
                 DataInputStream fromServer = new DataInputStream(socket.getInputStream())
         ) {
-            System.out.println("Socket connection success! Running communication thread thread!");
+            Print.debug("Socket connection success! Running communication thread thread!");
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
 //            run = true;
 //            String inputLine, outputLine;

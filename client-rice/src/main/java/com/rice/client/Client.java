@@ -16,97 +16,373 @@
 
 package com.rice.client;
 
+import com.rice.client.ui.CustomButton;
+import com.rice.client.ui.CustomSeparator;
+import com.rice.client.ui.FileTab;
+import com.rice.client.ui.SettingsTab;
+import com.rice.client.util.Logger;
+import com.rice.client.util.Print;
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Pair;
-import org.fxmisc.richtext.CodeArea;
-import org.fxmisc.richtext.LineNumberFactory;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class Client extends Application {
-    private boolean loggedIn = false;
-    private final String ip = "172.0.0.1";
-    private final String host = "localhost";
-    private final int port = 25000;
-    private CodeArea codeArea;
-    private ClientCommunicationThread serverCommThread;
+    private static boolean loggedIn = false;
+    private final boolean darkTheme = false;
+    private TestCommThread testCommThread;
+    private TabPane tabPane = new TabPane();
 
-    private final BorderPane root = new BorderPane();
-    private final ButtonBar buttonBar = new ButtonBar();
-    private final Button loginBtn = new Button("Login");
-    private final Button logoutBtn = new Button("Logout");
-    private final TextField usernameField = new TextField();
-    private final PasswordField passwordField = new PasswordField();
-    private final ScrollPane scrollPane = new ScrollPane();
+    // List of all open tabs
+    private List<FileTab> openFiles = new ArrayList<>();
 
+    public static void main(String[] args) {
+        Logger.start(Logger.ERROR);
+        launch(args);
+    }
 
     @Override
-    public void start(Stage primaryStage) {
-        codeArea = new CodeArea();
-        codeArea.setParagraphGraphicFactory(LineNumberFactory.get(codeArea));
+    public void start(Stage stage) {
+        BorderPane root = new BorderPane();
+        final VBox toolBar = new VBox(new MenuBar(), initButtonBar(new HBox()));
 
-        usernameField.setPromptText("Username");
-        passwordField.setPromptText("Password");
-
-        // Preset text fields for quicker testing
-        usernameField.setText("dadler");
-        passwordField.setText("password");
-
-        scrollPane.setContent(codeArea);
-        scrollPane.setFitToHeight(true);
-        scrollPane.setFitToWidth(true);
-
-        buttonBar.setMinHeight(50);
-        buttonBar.setPrefHeight(50);
-        buttonBar.setPadding(new Insets(10));
-        buttonBar.getButtons().addAll(usernameField, passwordField, loginBtn, logoutBtn);
-
-        root.setTop(buttonBar);
-        root.setCenter(scrollPane);
-
-        loginBtn.setAlignment(Pos.CENTER);
-        loginBtn.setOnAction(actionEvent -> {
-            System.out.println("Username=" + usernameField.getText());
-            System.out.println("Password=" + passwordField.getText());
-            if (!usernameField.getText().equals("") && !passwordField.getText().equals("")) {
-                loginUser(new Pair<>(usernameField.getText(), passwordField.getText()));
-            } else {
-                System.err.println("Error: You must enter a valid username and password!");
-            }
-        });
-
-        logoutBtn.setAlignment(Pos.CENTER);
-        logoutBtn.setOnAction(actionEvent -> {
-            serverCommThread.stopThread();
-        });
+//        toolBar.getChildren().addAll(initMenuBar(new MenuBar()), initButtonBar(new HBox()));
+        root.setTop(toolBar);
+        root.setCenter(tabPane);
 
         // Create a new scene using the root
         final Scene scene = new Scene(root, 800, 600);
 
-        primaryStage.setTitle("Project RICE");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        if (darkTheme) {
+            scene.getStylesheets().add(getClass().getResource("/css/flat_button_dark.css").toExternalForm());
+            toolBar.setStyle("-fx-background-color: #212121");
+            root.setStyle("-fx-background-color: #212121");
+            tabPane.setStyle("-fx-background-color: #212121");
+        } else {
+            scene.getStylesheets().add(getClass().getResource("/css/flat_button_light.css").toExternalForm());
+        }
+
+        // Shut everything down and clean up if you close the window
+        stage.setOnHiding(event -> {
+            Logger.stop();
+            System.exit(0);
+        });
+        stage.setTitle("Project RICE - Client");
+        stage.setMinWidth(800);
+        stage.setMinHeight(600);
+        stage.setScene(scene);
+        stage.show();
+
+        addNewFile();
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    private MenuBar initMenuBar(MenuBar menuBar) {
+
+        List<MenuItem> menuItems = new ArrayList<>();
+        List<Menu> menus = new ArrayList<>();
+
+        // File menu
+        Menu fileMenu = new Menu("File");
+
+        MenuItem createFile = new MenuItem("New File");
+        createFile.setOnAction(e -> addNewFile());
+        MenuItem openFile = new MenuItem("Open File");
+        openFile.setOnAction(e -> loadFile());
+        MenuItem openMultFiles = new MenuItem("Open Multiple Files");
+        openMultFiles.setOnAction(e -> loadMultipleFiles());
+        MenuItem save = new MenuItem("Save");
+        save.setOnAction(e -> saveFile());
+        MenuItem saveAs = new MenuItem("Save As");
+        saveAs.setOnAction(e -> saveFileAs());
+        MenuItem duplicate = new MenuItem("Duplicate");
+        duplicate.setOnAction(e -> dupicateFile());
+
+        SeparatorMenuItem sepFile1 = new SeparatorMenuItem();
+
+        MenuItem settings = new MenuItem("Settings...");
+        settings.setOnAction(e -> settingsTab());
+
+        fileMenu.getItems().addAll(createFile, openFile, openMultFiles, save, saveAs, duplicate, sepFile1, settings);
+
+        // Edit menu
+        Menu editMenu = new Menu("Edit");
+
+        MenuItem undo = new MenuItem("Undo");
+        MenuItem redo = new MenuItem("Redo");
+
+        SeparatorMenuItem sepEdit1 = new SeparatorMenuItem();
+
+        MenuItem cut = new MenuItem("Cut");
+        MenuItem copy = new MenuItem("Copy");
+        MenuItem paste = new MenuItem("Paste");
+
+        editMenu.getItems().addAll(undo, redo, sepEdit1, cut, copy, paste);
+        // Search menu
+        Menu searchMenu = new Menu("Search");
+        // View menu
+        Menu viewMenu = new Menu("View");
+        // Encoding menu
+        Menu encodingMenu = new Menu("Encoding");
+        // Language menu
+        Menu languageMenu = new Menu("Language");
+        // Syntax menu
+        MenuItem syntax = new MenuItem("Syntax");
+        // Language menu
+        languageMenu.getItems().addAll(syntax);
+        // Run menu
+        Menu runMenu = new Menu("Run");
+        // Plugins menu
+        Menu pluginsMenu = new Menu("Plugins");
+        // Window menu
+        Menu windowMenu = new Menu("Window");
+        MenuItem showDirectoryTree = new MenuItem("Show Directory Tree");
+        showDirectoryTree.setOnAction(e -> {
+//            directoryPane.setVisible(true);
+        });
+        MenuItem hideDirectoryTree = new MenuItem("Hide Directory Tree");
+        showDirectoryTree.setOnAction(e -> {
+//            directoryPane.setVisible(false);
+        });
+        windowMenu.getItems().addAll(showDirectoryTree, hideDirectoryTree);
+        // Help menu
+        Menu helpMenu = new Menu("?");
+
+
+        menuBar.getMenus().addAll(fileMenu, editMenu, searchMenu, viewMenu, encodingMenu, languageMenu, runMenu, pluginsMenu, windowMenu, helpMenu);
+//        menuBar.setUseSystemMenuBar(true);
+        return menuBar;
     }
 
-    public String getCodeAreaText() {
-        return this.codeArea.getText();
+    private HBox initButtonBar(HBox hbox) {
+        // Create button
+        Button createBtn = new CustomButton("PNG", "add", darkTheme);
+        createBtn.setOnAction(e -> addNewFile());
+        // Open button
+        Button openBtn = new CustomButton("PNG", "file", darkTheme);
+        openBtn.setOnAction(e -> loadFile());
+        // Save button
+        Button saveBtn = new CustomButton("PNG", "save", darkTheme);
+        saveBtn.setOnAction(e -> saveFile());
+        // Horizontal Separator
+        Separator sep1 = new CustomSeparator();
+        sep1.setVisible(!darkTheme);
+        // Cut button
+        Button cutBtn = new CustomButton("PNG", "cut", darkTheme);
+        cutBtn.setOnAction(e -> {
+            // Cut the currently selected text in the code area
+        });
+        // Copy button
+        Button copyBtn = new CustomButton("PNG", "copy", darkTheme);
+        copyBtn.setOnAction(e -> {
+            // Copy the currently selected text in the code area
+        });
+        // Paste button
+        Button pasteBtn = new CustomButton("PNG", "paste", darkTheme);
+        pasteBtn.setOnAction(e -> {
+            // Paste the text from the clipboard to the code area
+        });
+        // Horizontal separator
+        Separator sep2 = new CustomSeparator();
+        sep2.setVisible(!darkTheme);
+        // Undo button
+        Button undoBtn = new CustomButton("PNG", "undo", darkTheme);
+        undoBtn.setOnAction(e -> {
+            // Undo
+        });
+        // Redo button
+        Button redoBtn = new CustomButton("PNG", "redo", darkTheme);
+        redoBtn.setOnAction(e -> {
+            // Redo
+        });
+        // Horizontal separator
+        Separator sep3 = new CustomSeparator();
+        sep3.setVisible(!darkTheme);
+        // Login button
+        Button loginBtn = new Button("Login");
+        loginBtn.setOnAction(actionEvent -> new Thread(testCommThread = new TestCommThread(this)).start());
+        // Logout button
+        Button logoutBtn = new Button("Logout");
+        logoutBtn.setOnAction(actionEvent -> testCommThread.stopThread());
+
+        Separator sep4 = new CustomSeparator();
+        sep4.setVisible(!darkTheme);
+        Button testBtn = new CustomButton("PNG", "download", darkTheme);
+        testBtn.setOnAction(e -> {
+            Print.debug("Current file's name: " + getCurrentFile().getFileName() + "\nCurrent file's extension: " + getCurrentFile().getFileExtension());
+        });
+
+        // Set up ButtonBar HBox
+        hbox.setMinHeight(30);
+        hbox.setPrefHeight(30);
+        hbox.getChildren().addAll(createBtn, openBtn, saveBtn, sep1, cutBtn, copyBtn, pasteBtn, sep2, undoBtn, redoBtn, sep3, loginBtn, logoutBtn, sep4, testBtn);
+
+        return hbox;
+    }
+
+    public FileTab getCurrentFile() {
+        return (FileTab) tabPane.getSelectionModel().getSelectedItem();
+    }
+
+    private void addNewFile() {
+        int count = openFiles.size() + 1;
+        String newFile = "New File " + count;
+        FileTab fileTab = new FileTab(newFile);
+        fileTab.setOnClosed(e -> {
+            for (FileTab file : openFiles) {
+                if (fileTab.equals(file)) {
+                    openFiles.remove(openFiles.indexOf(file));
+                    Print.debug("Successfully removed " + fileTab.getText());
+                    break;
+                }
+            }
+        });
+        tabPane.getTabs().add(fileTab);
+        openFiles.add(fileTab);
+    }
+
+    private void settingsTab() {
+        if (SettingsTab.getNumOpen() == 0) {
+            SettingsTab settingsTab = new SettingsTab();
+            tabPane.getTabs().add(settingsTab);
+        } else {
+            Print.warn("You can only have one settings pane open at a time.");
+        }
+    }
+
+    private void dupicateFile() {
+        final FileTab original = getCurrentFile();
+        final String originalText = original.getTextAreaContent();
+        final String originalTitle = original.getText();
+        addNewFile();
+        FileTab duplicate = openFiles.get(openFiles.indexOf(getCurrentFile()) + 1);
+        duplicate.setText(originalText + "(1)");
+        duplicate.setTextArea(originalText);
+    }
+
+    private void saveFile() {
+        final FileTab openFile = getCurrentFile();
+        final String path = openFile.getFilePath();
+        String text = openFile.getTextAreaContent();
+
+        // If the file has not been saved before
+        if (path == null || path.equals("") || !openFile.isSaved()) {
+            saveFileAs();
+        } else {
+            final File file = new File(openFile.getFilePath());
+            try (final Writer writer = new BufferedWriter(new FileWriter(file))) {
+                writer.write(openFile.getTextAreaContent());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void saveFileAs() {
+        final FileTab openFile = getCurrentFile();
+        final FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save File");
+        final File file = fileChooser.showSaveDialog(new Stage());
+        try (final Writer writer = new BufferedWriter(new FileWriter(file))) {
+            file.createNewFile();
+            writer.write(openFile.getTextAreaContent());
+            openFile.setFilePath(file.getPath());
+            openFile.setFileName(file.getName());
+            openFile.setSaved(true);
+            Print.debug("File path for " + file.getName() + " is ('" + getCurrentFile().getFilePath() + "')");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String prevName = getCurrentFile().getText();
+        getCurrentFile().setText(file.getName());
+        String newName = getCurrentFile().getText();
+
+        if (!prevName.equals(newName)) {
+            Print.debug("[ " + prevName + " -> " + newName + " ]\n");
+        }
+    }
+
+    private void loadMultipleFiles() {
+        Print.debug("Not a thing yet :/");
+    }
+
+    private void loadFile() {
+        final FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(
+                new File(System.getProperty("user.home"))
+        );
+        final File file = fileChooser.showOpenDialog(new Stage());
+        for (FileTab openFile : openFiles) {
+            if (file.getName().equals(openFile.getFileName())) {
+                Print.error("File ('" + file.getName() + "') is already open.");
+                return;
+            }
+        }
+
+        if (file != null) {
+            addNewFile();
+            final FileTab currentFile = openFiles.get(openFiles.size() - 1);
+            try (final Scanner scanner = new Scanner(new FileReader(file))) {
+                String line;
+                while (scanner.hasNextLine()) {
+                    line = scanner.nextLine(); // TODO: Find out why this is throwing a NoSuchElementException on file load
+                    currentFile.appendTextArea(line + "\n");
+                    Print.debug("Line read: " + line);
+                }
+                currentFile.setFileName(file.getName());
+                currentFile.setFilePath(file.getPath());
+                currentFile.setSaved(true);
+            } catch (IOException | NoSuchElementException e) {
+//                Print.error("Failed to open file.");
+                e.printStackTrace();
+            }
+            Print.debug("File " + file.getName() + " was successfully opened from ('" + getCurrentFile().getFilePath() + "')");
+        }
+    }
+
+    private void loadDirectory() {
+        final DirectoryChooser directoryChooser = new DirectoryChooser();
+        final File selectedDirectory = directoryChooser.showDialog(new Stage());
+        if (selectedDirectory != null) {
+            selectedDirectory.getAbsolutePath();
+        }
     }
 
     private void loginUser(Pair<String, String> credentials) {
 //        if (!loggedIn) {
 //            loggedIn = true;
-        new Thread(serverCommThread = new ClientCommunicationThread(this, credentials, ip, port)).start();
+//        int port = 25000;
+//        String ip = "172.0.0.1";
+//        new Thread(serverCommThread = new ClientCommunicationThread(this, credentials, ip, port)).start();
+        Print.info("Starting server...");
 //        } else {
 //            System.err.println("Warning: The server comms thread is already running!");
 //        }
+
+
+//        private TextField usernameField;
+//        private PasswordField passwordField;
+//
+//        usernameField = new TextField();
+//        usernameField.setPromptText("Username");
+//        passwordField = new PasswordField();
+//        passwordField.setPromptText("Password");
+//
+//        // Preset text fields for quicker testing
+//        usernameField.setText("dadler");
+//        passwordField.setText("password");
     }
 }
 

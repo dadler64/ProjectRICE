@@ -1,4 +1,4 @@
-package com.rice.server.utils;
+package com.rice.client.util;
 
 import java.io.IOException;
 import java.io.OutputStream;

@@ -1,4 +1,4 @@
-package com.rice.server.utils;
+package com.rice.server.util;
 
 import com.rice.server.Server;
 import com.rice.server.User;
@@ -7,7 +7,7 @@ import javafx.application.Application;
 
 import java.util.*;
 
-import static com.rice.server.utils.Utilties.getSpaces;
+import static com.rice.server.util.Util.getSpaces;
 
 public class CommandLine {
 
