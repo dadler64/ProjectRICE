@@ -1,5 +1,6 @@
-package com.rice.client;
+package com.rice.client.thread;
 
+import com.rice.client.Client;
 import com.rice.client.util.Print;
 import javafx.util.Pair;
 
@@ -38,31 +39,36 @@ public class ClientCommunicationThread implements Runnable {
                 DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
                 DataInputStream fromServer = new DataInputStream(socket.getInputStream())
         ) {
-            Print.debug("Socket connection success! Running communication thread thread!");
+            Print.debug("Socket connection success! Running communication thread on port " + hostname + ":" + port + "!");
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
-//            run = true;
-//            String inputLine, outputLine;
-//
-//            // Initiate Client protocol
+            run = true;
+            String inputLine, outputLine;
+
+            // Initiate Client protocol
 //            ClientProtocol protocol = new ClientProtocol(credentials);
 //            outputLine = protocol.processInput(null);
 //            toServer.writeUTF(outputLine);
-//
-//            while (run) {
+
+            while (run) {
 //                inputLine = fromServer.readUTF();
 //                System.out.println("Server -> " + inputLine);
-//
 //                outputLine = protocol.processInput(inputLine);
-//            }
+
+                Print.info("Test");
+                Thread.sleep(3000);
+            }
             socket.close();
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
         }
     }
 
-    void stopThread() {
-        run = false;
+    public void stopThread() {
+        if (run) {
+            Print.debug("Stopping server...");
+            run = false;
+        } else {
+            Print.warn("Server is not running...");
+        }
     }
 }

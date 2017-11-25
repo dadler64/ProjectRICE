@@ -6,6 +6,7 @@ public class Print {
     private static boolean showDebug;
     private static boolean showWarn;
     private static boolean showError;
+    private static boolean showCrit;
 
     public static void out(Object object) {
         System.out.print(object);
@@ -15,29 +16,29 @@ public class Print {
         System.out.print(object + "\n");
     }
 
-    public static void debug(Object object) {
-        if (showDebug)
-            System.out.print("DEBUG | 0 | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
-    }
-
     public static void info(Object object) {
         if (showInfo)
-            System.out.print("INFO | 1 | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
+            System.out.print("0 | INFO | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
+    }
+
+    public static void debug(Object object) {
+        if (showDebug)
+            System.out.print("1 | DEBUG | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
     }
 
     public static void warn(Object object) {
         if (showWarn)
-            System.out.print("WARNING | 3 | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
+            System.out.print("3 | WARNING | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
     }
 
     public static void error(Object object) {
         if (showError)
-            System.err.print("ERROR | 4 | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
+            System.err.print("4 | ERROR | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
     }
 
     public static void critical(Object object) {
-        if (showError) {
-            System.err.print("CRITICAL ERROR | 5 | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
+        if (showCrit) {
+            System.err.print("5 | CRITICAL ERROR | " + Util.getDate() + " | " + Util.getThreadInfo() + " | " + object + "\n");
             System.exit(5);
         }
     }
@@ -47,6 +48,7 @@ public class Print {
         showDebug = false;
         showWarn = false;
         showError = false;
+        showCrit = false;
     }
 
     public static void setDebug() {
@@ -54,6 +56,7 @@ public class Print {
         showDebug = true;
         showWarn = false;
         showError = false;
+        showCrit = false;
     }
 
     public static void setWarn() {
@@ -61,6 +64,7 @@ public class Print {
         showDebug = true;
         showWarn = true;
         showError = false;
+        showCrit = false;
     }
 
     public static void setError() {
@@ -68,6 +72,15 @@ public class Print {
         showDebug = true;
         showWarn = true;
         showError = true;
+        showCrit = false;
+    }
+
+    public static void setCrit() {
+        showInfo = true;
+        showDebug = true;
+        showWarn = true;
+        showError = true;
+        showCrit = true;
     }
 
     public static void setNone() {
@@ -75,5 +88,6 @@ public class Print {
         showDebug = false;
         showWarn = false;
         showError = false;
+        showCrit = false;
     }
 }

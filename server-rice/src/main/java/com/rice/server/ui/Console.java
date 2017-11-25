@@ -7,14 +7,14 @@ import java.io.OutputStream;
 
 public class Console extends OutputStream {
 
-    private TextArea output = new TextArea();
+    private TextArea textArea = new TextArea();
 
-    public Console(CommandLinePane commandLinePane) {
-        this.output = commandLinePane.getTextArea();
+    public Console(TextArea textArea) {
+        this.textArea = textArea;
     }
 
     @Override
     public void write(int i) throws IOException {
-        output.appendText(String.valueOf((char) i));
+        textArea.appendText(String.valueOf((char) i));
     }
 }

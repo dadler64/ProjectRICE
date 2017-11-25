@@ -18,80 +18,37 @@ package com.rice.server;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.rice.server.ui.ServerGUI;
-import com.rice.server.util.CommandLine;
-import com.rice.server.util.CustomException;
-import com.rice.server.util.Print;
+import com.rice.server.ui.Console;
+import com.rice.server.util.ServerLogger;
+import com.rice.server.util.ServerPrint;
 import com.sun.media.jfxmedia.logging.Logger;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.io.Reader;
 import java.lang.reflect.Type;
 import java.util.List;
+import java.util.Stack;
 
-public class Server {
+public class Server extends Application {
 
-    private static final BufferedReader USER_INPUT = new BufferedReader(new InputStreamReader(System.in));
-    private static final CommandLine COMMAND_LINE = new CommandLine();
+    private static Stack<String> commands;
+    private Thread thread;
     public static List<User> userList;
     public static boolean GUI = true;
-
-    public static void main(String... args) {
-        // Set up logger
-        Logger.setLevel(Logger.ERROR);
-
-        if (args.length > 0) {
-            // Iterate through every argument
-            for (int index = 0; index < args.length; index++) {
-                // Terminal Mode
-                if (args[index].equalsIgnoreCase("-t")) {
-                    GUI = false;
-                }
-                // Show Help
-                if (args[index].equalsIgnoreCase("-h")) {
-                    Print.info("Usage: Server [-t]");
-                    Print.info("-t : start in command-line mode");
-                    return;
-                }
-            }
-        }
-        // Load users
-        getUsersFromJson(Server.class.getClass().getResourceAsStream("/users.json"));
-//        Print.debug("%d users loaded from ('%s')%n", userList.size(), USERS_FILE_PATH);
-        // Determine whether to launch the GUI or terminal
-        if (GUI) {
-            // Launch GUI
-            Application.launch(ServerGUI.class);
-        } else {
-            Print.info("Non-GUI mode activated!");
-            while (true) {
-                // Run the main server networking thread
-            new Thread(new ServerCommunicationThread()).start();
-                try {
-//                    getInput();
-                    String input;
-                    while (true) {
-                        Print.out(">> ");
-                        if ((input = USER_INPUT.readLine()) != null) {
-
-                            if (input.equalsIgnoreCase("exit")) {
-                                System.exit(0);
-                            }
-
-                            COMMAND_LINE.scheduleCommand(input);
-
-                            while (COMMAND_LINE.hasMoreCommands()) {
-                                String command = COMMAND_LINE.getNextCommand();
-                                Print.line(COMMAND_LINE.runCommand(command));
-                            }
-                        }
-                    }
-                } catch (IOException | CustomException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
+    private ServerCommunicationThread serverCommunicationThread;
 
     private static void getUsersFromJson(InputStream inputStream) {
         final Reader reader = new InputStreamReader(inputStream);
@@ -99,9 +56,94 @@ public class Server {
         final Type user = new TypeToken<List<User>>() {
         }.getType();
         userList = gson.fromJson(reader, user);
+        ServerPrint.debug(userList.size() + " users loaded.");
+    }
+
+    public static void main(String... args) {
+        ServerLogger.start(Logger.ERROR, true);
+        Application.launch();
     }
 
     public static List<User> getUserList() {
         return userList;
+    }
+
+    @Override
+    public void start(Stage stage) {
+
+        BorderPane root = new BorderPane();
+        HBox buttonBar = new HBox();
+        Button btnQuit = new Button("Quit");
+        Button btnStartServer = new Button("Start Server");
+        Button btnStopServer = new Button("Stop Server");
+        TextArea commandArea = new TextArea();
+
+        // Show 'System.out' in the server console
+        Console console = new Console(commandArea);
+        PrintStream printStream = new PrintStream(console, true);
+        System.setOut(printStream);
+        System.setErr(printStream);
+
+        // Set up button bar
+        buttonBar.setPrefHeight(50);
+        buttonBar.getChildren().addAll(btnStartServer, btnStopServer, btnQuit);
+        buttonBar.setPadding(new Insets(10));
+        buttonBar.minWidthProperty().bind(root.minWidthProperty());
+        buttonBar.prefWidthProperty().bind(root.prefWidthProperty());
+
+        // Set up command area
+        commandArea.minHeightProperty().bind(root.minHeightProperty());
+        commandArea.prefHeightProperty().bind(root.prefHeightProperty());
+        commandArea.minWidthProperty().bind(root.minWidthProperty());
+        commandArea.prefWidthProperty().bind(root.prefWidthProperty());
+
+        // Auto-Scroll to the bottom
+        commandArea.textProperty().addListener((ChangeListener<Object>) (observable, oldValue, newValue) -> {
+            commandArea.setScrollTop(Double.MAX_VALUE);// Use Double.MIN_VALUE to scroll to the top
+        });
+        commandArea.setEditable(false);
+        commandArea.setWrapText(false);
+        commandArea.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #ffffff; -fx-highlight-text-fill: #000000; -fx-text-fill: #ffffff; ");
+
+        ScrollPane scrollPane = new ScrollPane(commandArea);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setFitToWidth(true);
+
+        root.setTop(buttonBar);
+        root.setCenter(scrollPane);
+
+        Scene scene = new Scene(root, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/css/flat_button_light.css").toExternalForm());
+
+        stage.setTitle("Project RICE - Server");
+        stage.setMinWidth(800);
+        stage.setMinHeight(600);
+        stage.setScene(scene);
+        stage.show();
+        // Shut everything down if you close the window
+        stage.setOnHiding(event -> System.exit(0));
+
+        // Start server button
+        btnStartServer.setAlignment(Pos.CENTER);
+        btnStartServer.setOnAction(event -> {
+            new Thread(new ServerCommunicationThread()).start();
+        });
+
+        // Stop server button
+        btnStopServer.setAlignment(Pos.CENTER);
+        btnStopServer.setOnAction(event -> {
+            ServerPrint.info("Stopping RICE Server...");
+            // Stop the networking thread
+            serverCommunicationThread.stop();
+            ServerPrint.info("RICE Server successfully stopped.");
+        });
+
+        // Quit program button
+        btnQuit.setAlignment(Pos.CENTER);
+        btnQuit.setCancelButton(true);
+        btnQuit.setOnAction(e -> {
+            ServerPrint.info("Shutting down RICE Server GUI...");
+            System.exit(0);
+        });
     }
 }

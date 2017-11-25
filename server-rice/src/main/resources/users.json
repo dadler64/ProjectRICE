@@ -1,1 +1,22 @@
-[{"username":"dadler", "password":"password", "status":"LOGGED_OFF"}, {"username":"mcgoverns", "password":"password1", "status":"LOGGED_OFF"}, {"username":"sheltonz", "password":"password2", "status":"LOGGED_OFF"}, {"username":"rando", "password":"rando", "status":"BLOCKED"}]
+[
+  {
+    "username": "dadler",
+    "password": "password",
+    "status": "LOGGED_OFF"
+  },
+  {
+    "username": "mcgoverns",
+    "password": "password1",
+    "status": "LOGGED_OFF"
+  },
+  {
+    "username": "sheltonz",
+    "password": "password2",
+    "status": "LOGGED_OFF"
+  },
+  {
+    "username": "rando",
+    "password": "password3",
+    "status": "BLOCKED"
+  }
+]

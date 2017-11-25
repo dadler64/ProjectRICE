@@ -16,6 +16,7 @@
 
 package com.rice.client;
 
+import com.rice.client.thread.ClientCommunicationThread;
 import com.rice.client.ui.CustomButton;
 import com.rice.client.ui.CustomSeparator;
 import com.rice.client.ui.FileTab;
@@ -41,8 +42,9 @@ import java.util.Scanner;
 
 public class Client extends Application {
     private static boolean loggedIn = false;
+    private static int fileNumber = 0;
     private final boolean darkTheme = false;
-    private TestCommThread testCommThread;
+    private ClientCommunicationThread clientCommThread;
     private TabPane tabPane = new TabPane();
 
     // List of all open tabs
@@ -56,9 +58,8 @@ public class Client extends Application {
     @Override
     public void start(Stage stage) {
         BorderPane root = new BorderPane();
-        final VBox toolBar = new VBox(new MenuBar(), initButtonBar(new HBox()));
+        final VBox toolBar = new VBox(initMenuBar(new MenuBar()), initButtonBar(new HBox()));
 
-//        toolBar.getChildren().addAll(initMenuBar(new MenuBar()), initButtonBar(new HBox()));
         root.setTop(toolBar);
         root.setCenter(tabPane);
 
@@ -67,9 +68,9 @@ public class Client extends Application {
 
         if (darkTheme) {
             scene.getStylesheets().add(getClass().getResource("/css/flat_button_dark.css").toExternalForm());
-            toolBar.setStyle("-fx-background-color: #212121");
-            root.setStyle("-fx-background-color: #212121");
-            tabPane.setStyle("-fx-background-color: #212121");
+            toolBar.setStyle("-fx-background-color: #333");
+            root.setStyle("-fx-background-color: #333");
+            tabPane.setStyle("-fx-background-color: #333");
         } else {
             scene.getStylesheets().add(getClass().getResource("/css/flat_button_light.css").toExternalForm());
         }
@@ -89,10 +90,6 @@ public class Client extends Application {
     }
 
     private MenuBar initMenuBar(MenuBar menuBar) {
-
-        List<MenuItem> menuItems = new ArrayList<>();
-        List<Menu> menus = new ArrayList<>();
-
         // File menu
         Menu fileMenu = new Menu("File");
 
@@ -107,7 +104,7 @@ public class Client extends Application {
         MenuItem saveAs = new MenuItem("Save As");
         saveAs.setOnAction(e -> saveFileAs());
         MenuItem duplicate = new MenuItem("Duplicate");
-        duplicate.setOnAction(e -> dupicateFile());
+        duplicate.setOnAction(e -> duplicateFile());
 
         SeparatorMenuItem sepFile1 = new SeparatorMenuItem();
 
@@ -120,7 +117,9 @@ public class Client extends Application {
         Menu editMenu = new Menu("Edit");
 
         MenuItem undo = new MenuItem("Undo");
+        undo.setOnAction(e -> getCurrentFile().undo());
         MenuItem redo = new MenuItem("Redo");
+        redo.setOnAction(e -> getCurrentFile().redo());
 
         SeparatorMenuItem sepEdit1 = new SeparatorMenuItem();
 
@@ -138,9 +137,17 @@ public class Client extends Application {
         // Language menu
         Menu languageMenu = new Menu("Language");
         // Syntax menu
-        MenuItem syntax = new MenuItem("Syntax");
-        // Language menu
-        languageMenu.getItems().addAll(syntax);
+        Menu syntaxMenu = new Menu("Syntax");
+        RadioMenuItem none = new RadioMenuItem("None");
+        RadioMenuItem java = new RadioMenuItem("Java");
+        none.setOnAction(e -> {
+            // Set syntax level to NONE
+        });
+        java.setOnAction(e -> {
+            // Set syntax level to JAVA
+        });
+        syntaxMenu.getItems().addAll(none, java);
+        languageMenu.getItems().addAll(syntaxMenu);
         // Run menu
         Menu runMenu = new Menu("Run");
         // Plugins menu
@@ -161,7 +168,7 @@ public class Client extends Application {
 
 
         menuBar.getMenus().addAll(fileMenu, editMenu, searchMenu, viewMenu, encodingMenu, languageMenu, runMenu, pluginsMenu, windowMenu, helpMenu);
-//        menuBar.setUseSystemMenuBar(true);
+        menuBar.setUseSystemMenuBar(true);
         return menuBar;
     }
 
@@ -198,23 +205,22 @@ public class Client extends Application {
         sep2.setVisible(!darkTheme);
         // Undo button
         Button undoBtn = new CustomButton("PNG", "undo", darkTheme);
-        undoBtn.setOnAction(e -> {
-            // Undo
-        });
+        undoBtn.setOnAction(e -> getCurrentFile().undo());
         // Redo button
         Button redoBtn = new CustomButton("PNG", "redo", darkTheme);
-        redoBtn.setOnAction(e -> {
-            // Redo
-        });
+        redoBtn.setOnAction(e -> getCurrentFile().redo());
         // Horizontal separator
         Separator sep3 = new CustomSeparator();
         sep3.setVisible(!darkTheme);
         // Login button
         Button loginBtn = new Button("Login");
-        loginBtn.setOnAction(actionEvent -> new Thread(testCommThread = new TestCommThread(this)).start());
+        loginBtn.setOnAction(actionEvent -> {
+            clientCommThread = new ClientCommunicationThread(this, new Pair<>("test", "test"));
+            new Thread(clientCommThread).start();
+        });
         // Logout button
         Button logoutBtn = new Button("Logout");
-        logoutBtn.setOnAction(actionEvent -> testCommThread.stopThread());
+        logoutBtn.setOnAction(actionEvent -> clientCommThread.stopThread());
 
         Separator sep4 = new CustomSeparator();
         sep4.setVisible(!darkTheme);
@@ -223,7 +229,7 @@ public class Client extends Application {
             Print.debug("Current file's name: " + getCurrentFile().getFileName() + "\nCurrent file's extension: " + getCurrentFile().getFileExtension());
         });
 
-        // Set up ButtonBar HBox
+//      // Set up ButtonBar HBox
         hbox.setMinHeight(30);
         hbox.setPrefHeight(30);
         hbox.getChildren().addAll(createBtn, openBtn, saveBtn, sep1, cutBtn, copyBtn, pasteBtn, sep2, undoBtn, redoBtn, sep3, loginBtn, logoutBtn, sep4, testBtn);
@@ -231,13 +237,25 @@ public class Client extends Application {
         return hbox;
     }
 
+    /**
+     * @return currently open FileTab
+     */
     public FileTab getCurrentFile() {
         return (FileTab) tabPane.getSelectionModel().getSelectedItem();
     }
 
+    /**
+     *
+     */
     private void addNewFile() {
-        int count = openFiles.size() + 1;
-        String newFile = "New File " + count;
+        String newFile;
+        if (openFiles.size() < 1) {
+            newFile = "New File";
+            fileNumber++;
+        } else {
+            newFile = "New File " + fileNumber;
+            fileNumber++;
+        }
         FileTab fileTab = new FileTab(newFile);
         fileTab.setOnClosed(e -> {
             for (FileTab file : openFiles) {
@@ -252,6 +270,9 @@ public class Client extends Application {
         openFiles.add(fileTab);
     }
 
+    /**
+     * Open the settings tab
+     */
     private void settingsTab() {
         if (SettingsTab.getNumOpen() == 0) {
             SettingsTab settingsTab = new SettingsTab();
@@ -261,11 +282,13 @@ public class Client extends Application {
         }
     }
 
-    private void dupicateFile() {
+    private void duplicateFile() {
         final FileTab original = getCurrentFile();
         final String originalText = original.getTextAreaContent();
         final String originalTitle = original.getText();
+
         addNewFile();
+
         FileTab duplicate = openFiles.get(openFiles.indexOf(getCurrentFile()) + 1);
         duplicate.setText(originalText + "(1)");
         duplicate.setTextArea(originalText);
@@ -274,7 +297,7 @@ public class Client extends Application {
     private void saveFile() {
         final FileTab openFile = getCurrentFile();
         final String path = openFile.getFilePath();
-        String text = openFile.getTextAreaContent();
+        final String text = openFile.getTextAreaContent();
 
         // If the file has not been saved before
         if (path == null || path.equals("") || !openFile.isSaved()) {
@@ -282,7 +305,7 @@ public class Client extends Application {
         } else {
             final File file = new File(openFile.getFilePath());
             try (final Writer writer = new BufferedWriter(new FileWriter(file))) {
-                writer.write(openFile.getTextAreaContent());
+                writer.write(text);
             } catch (IOException e) {
                 e.printStackTrace();
             }

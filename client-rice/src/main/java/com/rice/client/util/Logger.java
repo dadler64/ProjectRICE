@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
+@SuppressWarnings("Duplicates")
 public class Logger {
 
     public static final int NONE = 0;
@@ -40,10 +41,6 @@ public class Logger {
                 Print.setError();
                 Print.info("Logging level set to 4");
             }
-//            default: {
-//                Print.setNone();
-//                System.out.println("Logging level set to none");
-//            }
         }
     }
 
@@ -61,7 +58,7 @@ public class Logger {
             printStream = new PrintStream(splitOutputStream);
             System.setOut(printStream);
         } catch (IOException e) {
-            Print.error("Failed to start logger. \n");
+            Print.error("Failed to start Logger. \n");
             e.printStackTrace();
         }
         Print.info("Logger started!");

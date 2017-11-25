@@ -1,5 +1,7 @@
 package com.rice.server;
 
+import com.rice.server.util.ServerPrint;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -9,6 +11,7 @@ import java.net.Socket;
 public class ServerCommunicationThread implements Runnable {
 
     private int port;
+    private boolean run;
 
     public ServerCommunicationThread() {
         this(25000);
@@ -20,7 +23,7 @@ public class ServerCommunicationThread implements Runnable {
 
     @Override
     public void run() {
-        System.out.printf("Server Started and listening on port %d%n", port);
+        ServerPrint.info("Server Started and listening on port " + port);
 
         // Set up network connection
         try (
@@ -29,7 +32,9 @@ public class ServerCommunicationThread implements Runnable {
                 final DataOutputStream output = new DataOutputStream(clientSocket.getOutputStream());
                 final DataInputStream input = new DataInputStream(clientSocket.getInputStream())
         ) {
-            System.out.println("Server successfully connected to client.");
+            ServerPrint.debug("Server successfully connected to client.");
+
+
 //            String inputLine, outputLine;
 //
 //            // Initiate protocol
@@ -44,11 +49,24 @@ public class ServerCommunicationThread implements Runnable {
 //                outputLine = protocol.processInput(inputLine);
 //            }
 
-            while (true) {
-                System.out.println("Connected!");
+//            output.writeUTF("Test");
+
+            run = true;
+            while (run) {
+                ServerPrint.line("Connected!");
+                Thread.sleep(30000);
             }
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void stop() {
+        if (run) {
+            run = false;
+            ServerPrint.info("Server stopped!");
+        } else {
+            ServerPrint.warn("Server is not running...");
         }
     }
 }

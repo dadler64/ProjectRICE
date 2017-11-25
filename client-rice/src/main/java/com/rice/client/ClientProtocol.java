@@ -10,7 +10,7 @@ public class ClientProtocol {
     private String username;
     private String password;
 
-    ClientProtocol(Pair<String, String> credentials) {
+    public ClientProtocol(Pair<String, String> credentials) {
         this.username = credentials.getKey();
         this.password = credentials.getValue();
         this.state = INIT;

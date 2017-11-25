@@ -5,7 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-public class Logger {
+@SuppressWarnings("Duplicates")
+public class ServerLogger {
 
     public static final int NONE = 0;
     public static final int INFO = 1;
@@ -13,43 +14,40 @@ public class Logger {
     public static final int WARN = 3;
     public static final int ERROR = 4;
 
-    private static final String LOG_FILE_NAME = "Client.log";
+    private static final String LOG_FILE_NAME = "Server.log";
     private static PrintStream printStream;
     private static FileOutputStream fileOutputStream;
     private static SplitOutputStream splitOutputStream;
 
-    private static void setLoggingLevel(int level) {
+    private static void setLoggingLevel(int level, boolean verbose) {
+        ServerPrint.setVerbose(verbose);
         switch (level) {
             case 0: {
-                Print.setNone();
+                ServerPrint.setNone();
                 System.out.println("Logging level set to 0");
             }
             case 1: {
-                Print.setInfo();
-                Print.info("Logging level set to 1");
+                ServerPrint.setInfo();
+                ServerPrint.info("Logging level set to 1");
             }
             case 2: {
-                Print.setDebug();
-                Print.info("Logging level set to 2");
+                ServerPrint.setDebug();
+                ServerPrint.info("Logging level set to 2");
             }
             case 3: {
-                Print.setWarn();
-                Print.info("Logging level set to 3");
+                ServerPrint.setWarn();
+                ServerPrint.info("Logging level set to 3");
             }
             case 4: {
-                Print.setError();
-                Print.info("Logging level set to 4");
+                ServerPrint.setError();
+                ServerPrint.info("Logging level set to 4");
             }
-//            default: {
-//                Print.setNone();
-//                System.out.println("Logging level set to none");
-//            }
         }
     }
 
-    public static void start(int level) {
-        setLoggingLevel(level);
-        Print.info("Starting Logger...");
+    public static void start(int level, boolean verbose) {
+        setLoggingLevel(level, verbose);
+        ServerPrint.info("Starting Logger...");
         // Set up split output stream
         try {
             final File logFile = new File(LOG_FILE_NAME);
@@ -61,15 +59,15 @@ public class Logger {
             printStream = new PrintStream(splitOutputStream);
             System.setOut(printStream);
         } catch (IOException e) {
-            Print.error("Failed to start logger. \n");
+            ServerPrint.error("Failed to start Logger. \n");
             e.printStackTrace();
         }
-        Print.info("Logger started!");
+        ServerPrint.info("ServerLogger started!");
 
     }
 
     public static void stop() {
-        Print.info("Stopping Logger...");
+        ServerPrint.info("Stopping ServerLogger...");
         System.setOut(System.out);
         try {
             fileOutputStream.close();
@@ -81,6 +79,6 @@ public class Logger {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Print.info("Logger stopped!");
+        ServerPrint.info("ServerLogger stopped!");
     }
 }
