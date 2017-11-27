@@ -39,7 +39,7 @@ public class ClientCommunicationThread implements Runnable {
                 DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
                 DataInputStream fromServer = new DataInputStream(socket.getInputStream())
         ) {
-            Print.debug("Socket connection success! Running communication thread on port " + hostname + ":" + port + "!");
+            Print.debug("Socket connection success! Connected to server at " + hostname + ":" + port + "!");
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
             run = true;
             String inputLine, outputLine;
@@ -54,10 +54,13 @@ public class ClientCommunicationThread implements Runnable {
 //                System.out.println("Server -> " + inputLine);
 //                outputLine = protocol.processInput(inputLine);
 
-                Print.info("Test");
+                outputLine = client.getCurrentFile().getTextAreaContent();
+                Print.line("<< Server << \n" + outputLine);
+                toServer.writeUTF(outputLine);
                 Thread.sleep(3000);
             }
             socket.close();
+            Print.debug("Server Stopped!");
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

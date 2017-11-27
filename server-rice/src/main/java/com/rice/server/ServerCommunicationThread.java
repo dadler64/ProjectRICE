@@ -7,18 +7,21 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.List;
 
 public class ServerCommunicationThread implements Runnable {
 
     private int port;
     private boolean run;
+    private Server server;
 
-    public ServerCommunicationThread() {
-        this(25000);
+    public ServerCommunicationThread(Server server) {
+        this(server, 25000);
     }
 
-    public ServerCommunicationThread(int port) {
+    public ServerCommunicationThread(Server server, int port) {
         this.port = port;
+        this.server = server;
     }
 
     @Override
@@ -33,30 +36,19 @@ public class ServerCommunicationThread implements Runnable {
                 final DataInputStream input = new DataInputStream(clientSocket.getInputStream())
         ) {
             ServerPrint.debug("Server successfully connected to client.");
-
-
-//            String inputLine, outputLine;
-//
-//            // Initiate protocol
-//            ServerProtocol protocol = new ServerProtocol(Server.getUserList());
-//            outputLine = protocol.processInput(null);
-//            output.writeUTF(outputLine);
-//
-//            while (true) {
-//                inputLine = input.readUTF();
-//                System.out.println("Client -> " + inputLine);
-//
-//                outputLine = protocol.processInput(inputLine);
-//            }
-
-//            output.writeUTF("Test");
+            String inputLine, outputLine, currentText;
+            List<User> loggedIn = server.getUserList();
 
             run = true;
             while (run) {
-                ServerPrint.line("Connected!");
-                Thread.sleep(30000);
+                inputLine = input.readUTF();
+                if (inputLine != null) {
+                    ServerPrint.line(">> Client >> \n" + inputLine);
+                }
+//                Thread.sleep(3000);
+
             }
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

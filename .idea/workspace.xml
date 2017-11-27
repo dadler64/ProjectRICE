@@ -1,40 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4425a0df-bc80-42d5-a0ac-4820efeec9d2" name="Default" comment="Improved performance and exterminated some bugs.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/notepad++.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/TextWatcherThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/css/mac_os.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-rice/src/main/resources/css/flat_button_light.css" />
+    <list default="true" id="4425a0df-bc80-42d5-a0ac-4820efeec9d2" name="Default" comment="Further simplification of project">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Compare.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/java/backups/CommandLinePane112517.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/CommandLinePane.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/ServerGUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/StatsPane.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/UserPane.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Command.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/CommandLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/CustomException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Utilties.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ClientCommunicationThread.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client-rice/src/main/resources/css/java-syntax.css" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/css/syntax.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Logger.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/ServerLogger.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Print.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/ServerPrint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/java/backups/Util112617.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/client-rice.iml" afterPath="$PROJECT_DIR$/client-rice/client-rice.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ClientProtocol.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ClientProtocol.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/FileTab.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/FileTab.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/SettingsTab.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/SettingsTab.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Logger.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Logger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Print.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Print.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/resources/css/flat_button_light.css" afterPath="$PROJECT_DIR$/client-rice/src/main/resources/css/flat_button_light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-rice.iml" afterPath="$PROJECT_DIR$/project-rice.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/server-rice.iml" afterPath="$PROJECT_DIR$/server-rice/server-rice.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/Console.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/Console.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/src/main/resources/users.json" afterPath="$PROJECT_DIR$/server-rice/src/main/resources/users.json" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/client-rice/target/" />
@@ -48,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="218" column="24" lean-forward="true" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
+            <state relative-caret-position="197">
+              <caret line="215" column="43" lean-forward="false" selection-start-line="215" selection-start-column="43" selection-end-line="215" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#loginUser#0;class#Client#0" expanded="false" />
@@ -61,32 +37,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java">
+      <file leaf-file-name="FileTab.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/FileTab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="139" column="5" lean-forward="false" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding>
-                <element signature="e#0#5406#0" expanded="true" />
-                <element signature="e#5240#5241#0" expanded="true" />
-                <element signature="e#5271#5272#0" expanded="true" />
+                <element signature="e#1170#1171#0" expanded="true" />
+                <element signature="e#1209#1210#0" expanded="true" />
+                <element signature="method#setTextArea#0;class#FileTab#0" expanded="false" />
+                <element signature="method#setFileName#0;class#FileTab#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerCommunicationThread.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+              <folding>
+                <element signature="e#2240#2241#0" expanded="true" />
+                <element signature="e#2271#2272#0" expanded="true" />
+                <element signature="e#2309#2310#0" expanded="true" />
+                <element signature="e#2343#2344#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerCommunicationThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="544">
+              <caret line="34" column="87" lean-forward="true" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Util112617.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/java/backups/Util112617.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,8 +102,20 @@
       <file leaf-file-name="ClientCommunicationThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="477">
+              <caret line="57" column="43" lean-forward="false" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Compare.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Compare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,9 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/CustomButton.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/CustomSeparator.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/resources/css/flat_button_dark.css" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/SettingsPane.java" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/StrUtil.java" />
         <option value="$PROJECT_DIR$/test/java/examples/SlideOut.java" />
@@ -169,7 +186,6 @@
         <option value="$PROJECT_DIR$/test/java/backups/ServerGUI171117.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Utilties.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Util.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Util.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Print.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/CommandLine.java" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/SplitOutputStream.java" />
@@ -187,7 +203,6 @@
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/syntax/Syntax.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/threads/ParagraphThread.java" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/TextWatcher.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/FileTab.java" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/TextWatcherThread.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/resources/css/flat_button_light.css" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Logger.java" />
@@ -203,10 +218,15 @@
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/CommandLinePane.java" />
         <option value="$PROJECT_DIR$/test/java/backups/CommandLinePane112517.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/Console.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" />
-        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Compare.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java" />
+        <option value="$PROJECT_DIR$/test/java/backups/Util112617.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/Util.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Util.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/FileTab.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" />
+        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" />
       </list>
     </option>
   </component>
@@ -257,11 +277,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="y" value="22" />
-    <option name="width" value="960" />
-    <option name="height" value="589" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="101" />
+    <option name="y" value="87" />
+    <option name="width" value="1698" />
+    <option name="height" value="1097" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -328,6 +348,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -555,9 +578,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -572,12 +592,8 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JAVA" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/css" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons/light" />
-      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons/dark" />
-      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.rice.client.ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/java/backups" />
@@ -588,11 +604,16 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="backups" />
+      <recent name="com.rice.client.thread" />
       <recent name="com.rice.client" />
       <recent name="com.rice.server" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.rice.client.ui" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/css" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons/light" />
+      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons/dark" />
+      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -777,7 +798,9 @@
       <workItem from="1511277291881" duration="8950000" />
       <workItem from="1511321209736" duration="134000" />
       <workItem from="1511361396565" duration="14016000" />
-      <workItem from="1511626430425" duration="7651000" />
+      <workItem from="1511626430425" duration="7771000" />
+      <workItem from="1511735137263" duration="10592000" />
+      <workItem from="1511793605813" duration="174000" />
     </task>
     <task id="LOCAL-00001" summary="Project clean up and reconfiguration">
       <created>1510190444234</created>
@@ -793,32 +816,47 @@
       <option name="project" value="LOCAL" />
       <updated>1510963399957</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Project clean up and simplification.">
+      <created>1511649150431</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511649150431</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178523000" />
+    <option name="totallyTimeSpent" value="189409000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1178" extended-state="6" />
+    <frame x="101" y="87" width="1698" height="1097" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2990566" sideWeight="0.46379128" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16478191" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2990566" sideWeight="0.53620875" order="2" side_tool="true" content_ui="tabs" x="236" y="407" width="1159" height="704" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29826352" sideWeight="0.53620875" order="2" side_tool="true" content_ui="tabs" x="236" y="407" width="1159" height="704" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23109691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735848" sideWeight="0.49557522" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25282714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -830,6 +868,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735848" sideWeight="0.49557522" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -872,7 +911,8 @@
     <MESSAGE value="Project clean up and reconfiguration" />
     <MESSAGE value="Added networking protocols for client and server" />
     <MESSAGE value="Improved performance and exterminated bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved performance and exterminated bugs." />
+    <MESSAGE value="Project clean up and simplification." />
+    <option name="LAST_COMMIT_MESSAGE" value="Project clean up and simplification." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -884,29 +924,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/MenuBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="86" column="11" lean-forward="false" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/resources/css/syntax.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Utilties.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/fxmisc/flowless/flowless/0.6/flowless-0.6.jar!/org/fxmisc/flowless/VirtualizedScrollPane.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="139" column="11" lean-forward="false" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/syntax/Java.java" />
     <entry file="file://$PROJECT_DIR$/test/java/examples/JavaKeywords.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -973,13 +990,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/StatsPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/StatsPane.java" />
     <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Util.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -991,9 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,8 +1020,8 @@
           <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1847#1848#0" expanded="false" />
-            <element signature="e#1874#1875#0" expanded="false" />
+            <element signature="e#1855#1856#0" expanded="false" />
+            <element signature="e#1882#1883#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1046,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,9 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1252#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1064,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,8 +1086,8 @@
         <state relative-caret-position="1564">
           <caret line="96" column="23" lean-forward="false" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
           <folding>
-            <element signature="e#2887#2888#0" expanded="true" />
-            <element signature="e#2932#2933#0" expanded="true" />
+            <element signature="e#2887#2888#0" expanded="false" />
+            <element signature="e#2932#2933#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1093,34 +1096,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="67" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/CustomException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/CommandLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/CustomException.java" />
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/CommandLine.java" />
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Command.java" />
     <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/ServerLogger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -1129,21 +1110,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/ServerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="28" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/ServerGUI.java" />
     <entry file="file://$PROJECT_DIR$/test/java/backups/Command112517.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#323#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1151,9 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#252#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1161,7 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,7 +1136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-854">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,39 +1143,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/FileTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#setTextArea#0;class#FileTab#0" expanded="false" />
-            <element signature="method#setTextAreaContent#0;class#FileTab#0" expanded="false" />
-            <element signature="method#setFileName#0;class#FileTab#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/CommandLinePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/CommandLinePane.java" />
     <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/Console.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1221,10 +1162,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Compare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/beans/value/ObservableValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/beans/value/ChangeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="45" column="17" lean-forward="false" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/backups/Util112617.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="e#2240#2241#0" expanded="true" />
+            <element signature="e#2271#2272#0" expanded="true" />
+            <element signature="e#2309#2310#0" expanded="true" />
+            <element signature="e#2343#2344#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/FileTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="method#setTextArea#0;class#FileTab#0" expanded="false" />
+            <element signature="method#setFileName#0;class#FileTab#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="477">
+          <caret line="57" column="43" lean-forward="false" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="87" lean-forward="true" selection-start-line="34" selection-start-column="87" selection-end-line="34" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1233,37 +1250,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="218" column="24" lean-forward="true" selection-start-line="218" selection-start-column="24" selection-end-line="218" selection-end-column="24" />
+        <state relative-caret-position="197">
+          <caret line="215" column="43" lean-forward="false" selection-start-line="215" selection-start-column="43" selection-end-line="215" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginUser#0;class#Client#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="139" column="5" lean-forward="false" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#5406#0" expanded="true" />
-            <element signature="e#5240#5241#0" expanded="true" />
-            <element signature="e#5271#5272#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
           </folding>
         </state>
       </provider>

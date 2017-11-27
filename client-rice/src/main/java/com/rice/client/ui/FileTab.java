@@ -13,9 +13,12 @@ public class FileTab extends Tab {
 
     private final CodeArea textArea;
     private boolean saved = false;
+    private boolean sharing = false;
     private String filePath = null;
     private String fileName;
     private TextWatcherThread textWatcher;
+    private String oldText;
+    private String newText;
 
     public FileTab(String fileName) {
         this.fileName = fileName;
@@ -43,6 +46,11 @@ public class FileTab extends Tab {
 
         // Text selection test
         textArea.setOnContextMenuRequested(e -> Print.debug("TEST: Selected text: \n" + textArea.getSelectedText()));
+        // Get the changes in strings
+        textArea.textProperty().addListener((observable, oldValue, newValue) -> {
+            this.oldText = oldValue;
+            this.newText = newValue;
+        });
 
         this.setText(fileName);
         this.setContent(new VirtualizedScrollPane<>(textArea));
@@ -105,5 +113,13 @@ public class FileTab extends Tab {
 
     public boolean hasFileExtension() {
         return getFileExtension() != null || !getFileExtension().equals("");
+    }
+
+    public boolean isSharing() {
+        return sharing;
+    }
+
+    public void setSharing(boolean sharing) {
+        this.sharing = sharing;
     }
 }

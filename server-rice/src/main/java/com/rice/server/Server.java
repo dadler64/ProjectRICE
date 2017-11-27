@@ -60,12 +60,16 @@ public class Server extends Application {
     }
 
     public static void main(String... args) {
-        ServerLogger.start(Logger.ERROR, true);
+        ServerLogger.start(Logger.ERROR, false);
         Application.launch();
     }
 
-    public static List<User> getUserList() {
+    public List<User> getUserList() {
         return userList;
+    }
+
+    public void addUser(User user) {
+        userList.add(user);
     }
 
     @Override
@@ -126,7 +130,7 @@ public class Server extends Application {
         // Start server button
         btnStartServer.setAlignment(Pos.CENTER);
         btnStartServer.setOnAction(event -> {
-            new Thread(new ServerCommunicationThread()).start();
+            new Thread(new ServerCommunicationThread(this)).start();
         });
 
         // Stop server button

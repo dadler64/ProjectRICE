@@ -212,15 +212,13 @@ public class Client extends Application {
         // Horizontal separator
         Separator sep3 = new CustomSeparator();
         sep3.setVisible(!darkTheme);
-        // Login button
-        Button loginBtn = new Button("Login");
-        loginBtn.setOnAction(actionEvent -> {
+        // Share button
+        Button shareBtn = new Button("Share");
+        shareBtn.setOnAction(actionEvent -> {
+            this.getCurrentFile().setSharing(true);
             clientCommThread = new ClientCommunicationThread(this, new Pair<>("test", "test"));
             new Thread(clientCommThread).start();
         });
-        // Logout button
-        Button logoutBtn = new Button("Logout");
-        logoutBtn.setOnAction(actionEvent -> clientCommThread.stopThread());
 
         Separator sep4 = new CustomSeparator();
         sep4.setVisible(!darkTheme);
@@ -232,7 +230,7 @@ public class Client extends Application {
 //      // Set up ButtonBar HBox
         hbox.setMinHeight(30);
         hbox.setPrefHeight(30);
-        hbox.getChildren().addAll(createBtn, openBtn, saveBtn, sep1, cutBtn, copyBtn, pasteBtn, sep2, undoBtn, redoBtn, sep3, loginBtn, logoutBtn, sep4, testBtn);
+        hbox.getChildren().addAll(createBtn, openBtn, saveBtn, sep1, cutBtn, copyBtn, pasteBtn, sep2, undoBtn, redoBtn, sep3, shareBtn, sep4, testBtn);
 
         return hbox;
     }
