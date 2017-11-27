@@ -2,6 +2,8 @@ package com.rice.client.thread;
 
 import com.rice.client.Client;
 import com.rice.client.util.Print;
+import com.rice.lib.Packet;
+import com.rice.lib.packets.HandshakePacket;
 import javafx.util.Pair;
 
 import java.io.*;
@@ -36,32 +38,28 @@ public class ClientCommunicationThread implements Runnable {
 
         try (
                 Socket socket = new Socket(hostname, port);
-                DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
-                DataInputStream fromServer = new DataInputStream(socket.getInputStream())
+                final ObjectOutputStream toServer = new ObjectOutputStream(socket.getOutputStream());
+                final ObjectInputStream fromServer = new ObjectInputStream(socket.getInputStream())
         ) {
             Print.debug("Socket connection success! Connected to server at " + hostname + ":" + port + "!");
-            BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
             run = true;
-            String inputLine, outputLine;
-
-            // Initiate Client protocol
-//            ClientProtocol protocol = new ClientProtocol(credentials);
-//            outputLine = protocol.processInput(null);
-//            toServer.writeUTF(outputLine);
-
+            toServer.writeObject(new HandshakePacket(credentials.getKey()));
+            System.out.println("Sent hand shake");
             while (run) {
+                Packet packet = null;
+                while((packet = (Packet)fromServer.readObject()) != null) {
+                    System.out.println(packet.getId());
+                }
 //                inputLine = fromServer.readUTF();
 //                System.out.println("Server -> " + inputLine);
 //                outputLine = protocol.processInput(inputLine);
-
-                outputLine = client.getCurrentFile().getTextAreaContent();
-                Print.line("<< Server << \n" + outputLine);
-                toServer.writeUTF(outputLine);
-                Thread.sleep(3000);
+//                Thread.sleep(500);
             }
             socket.close();
             Print.debug("Server Stopped!");
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
