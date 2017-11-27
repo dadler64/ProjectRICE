@@ -23,6 +23,7 @@ import com.rice.server.util.ServerLogger;
 import com.rice.server.util.ServerPrint;
 import com.sun.media.jfxmedia.logging.Logger;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -39,6 +40,7 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.Reader;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
@@ -46,18 +48,19 @@ public class Server extends Application {
 
     private static Stack<String> commands;
     private Thread thread;
-    public static List<User> userList;
+    private List<User> userList;
     public static boolean GUI = true;
     private ServerCommunicationThread serverCommunicationThread;
 
-    private static void getUsersFromJson(InputStream inputStream) {
-        final Reader reader = new InputStreamReader(inputStream);
-        final Gson gson = new Gson();
-        final Type user = new TypeToken<List<User>>() {
-        }.getType();
-        userList = gson.fromJson(reader, user);
-        ServerPrint.debug(userList.size() + " users loaded.");
-    }
+//
+//    private static void getUsersFromJson(InputStream inputStream) {
+//        final Reader reader = new InputStreamReader(inputStream);
+//        final Gson gson = new Gson();
+//        final Type user = new TypeToken<List<User>>() {
+//        }.getType();
+//        userList = gson.fromJson(reader, user);
+//        ServerPrint.debug(userList.size() + " users loaded.");
+//    }
 
     public static void main(String... args) {
         ServerLogger.start(Logger.ERROR, false);
@@ -74,7 +77,7 @@ public class Server extends Application {
 
     @Override
     public void start(Stage stage) {
-
+        userList = new ArrayList<>();
         BorderPane root = new BorderPane();
         HBox buttonBar = new HBox();
         Button btnQuit = new Button("Quit");
@@ -130,7 +133,12 @@ public class Server extends Application {
         // Start server button
         btnStartServer.setAlignment(Pos.CENTER);
         btnStartServer.setOnAction(event -> {
-            new Thread(new ServerCommunicationThread(this)).start();
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    new Thread(serverCommunicationThread = new ServerCommunicationThread(Server.this)).start();
+                }
+            });
         });
 
         // Stop server button

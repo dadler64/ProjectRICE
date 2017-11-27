@@ -27,6 +27,7 @@ public class ClientAcceptThread extends Thread {
                     final ObjectOutputStream output = new ObjectOutputStream(clientSocket.getOutputStream());
                     final ObjectInputStream input = new ObjectInputStream(clientSocket.getInputStream())) {
                 this.server.addUser(new User("UNKNOWN", "", UserStatus.UNKNOWN, input, output));
+                System.out.println("ADDED USER");
             } catch (IOException e) {
                 e.printStackTrace();
             }

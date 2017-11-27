@@ -29,15 +29,15 @@ public class LoginThread implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("-----------------------------------------------------");
-        System.out.println("Username=" + credentials.getKey() + ", Password=" + credentials.getValue());
-        System.out.println("Logging user in...");
-        System.out.printf("Validating user credentials for '%s'...%n", credentials.getKey());
-        if (validateCredentials(Server.userList, credentials)) {
-//                loginUser();
-            System.out.printf("User '%s' is now logged in.%n", credentials.getKey());
-        } else {
-            System.out.printf("Error: Incorrect login credentials for '%s'.%n", credentials.getKey());
-        }
+//        System.out.println("-----------------------------------------------------");
+//        System.out.println("Username=" + credentials.getKey() + ", Password=" + credentials.getValue());
+//        System.out.println("Logging user in...");
+//        System.out.printf("Validating user credentials for '%s'...%n", credentials.getKey());
+//        if (validateCredentials(Server.userList, credentials)) {
+////                loginUser();
+//            System.out.printf("User '%s' is now logged in.%n", credentials.getKey());
+//        } else {
+//            System.out.printf("Error: Incorrect login credentials for '%s'.%n", credentials.getKey());
+//        }
     }
 }

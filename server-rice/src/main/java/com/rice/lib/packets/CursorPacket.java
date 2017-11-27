@@ -7,7 +7,7 @@ public class CursorPacket extends Packet {
     private int line, pos;
 
     public CursorPacket(final int lien, final int pos) {
-        super(4);
+        super(5);
         this.line = line;
         this.pos = pos;
     }

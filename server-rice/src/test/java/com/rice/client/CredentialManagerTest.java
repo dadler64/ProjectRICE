@@ -17,10 +17,10 @@ class CredentialManagerTest {
 
     @BeforeEach
     void setUp() {
-        users.add(new User("dadler", "password", UserStatus.LOGGED_OFF));
-        users.add(new User("mcgoverns2", "password1", UserStatus.LOGGED_OFF));
-        users.add(new User("sheltonz", "password2", UserStatus.LOGGED_ON));
-        users.add(new User("rando", "rando", UserStatus.BLOCKED));
+//        users.add(new User("dadler", "password", UserStatus.LOGGED_OFF));
+//        users.add(new User("mcgoverns2", "password1", UserStatus.LOGGED_OFF));
+//        users.add(new User("sheltonz", "password2", UserStatus.LOGGED_ON));
+//        users.add(new User("rando", "rando", UserStatus.BLOCKED));
     }
 
     @Test

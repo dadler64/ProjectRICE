@@ -11,7 +11,7 @@ public class ModifyPacket extends Packet{
     private int startLine, endLine, startPos, endPos;
 
     public ModifyPacket(final String data, final ModifyType modifyType, final int startLine, final int endLine, final int startPos, final int endPos) {
-        super(3);
+        super(4);
         this.data = data;
         this.modifyType = modifyType;
         this.startLine = startLine;

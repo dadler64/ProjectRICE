@@ -1,10 +1,7 @@
 package com.rice.server;
 
 import com.rice.lib.Packet;
-import com.rice.lib.packets.CursorPacket;
-import com.rice.lib.packets.DisconnectPacket;
-import com.rice.lib.packets.HandshakePacket;
-import com.rice.lib.packets.ModifyPacket;
+import com.rice.lib.packets.*;
 import com.rice.server.util.ServerPrint;
 
 import java.io.*;
@@ -36,14 +33,18 @@ public class ServerCommunicationThread implements Runnable {
         clientAcceptThread.start();
             run = true;
             while (run) {
+                System.out.println(server.getUserList().size());
                 for(final User u : server.getUserList()) {
+                    System.out.println(u.getStatus().name());
                     Packet packet = null;
                     try {
                         while ((packet = (Packet)u.getInputStream().readObject()) != null) {
                             if(packet instanceof HandshakePacket) {
+                                System.out.println("Handshake received");
                                 final HandshakePacket handshakePacket = (HandshakePacket)packet;
                                 u.setUsername(handshakePacket.getUsername());
                                 u.setStatus(UserStatus.LOGGED_ON);
+                                u.getOutputStream().writeObject(new WelcomePacket());
                                 continue;
                             }
                             if(packet instanceof DisconnectPacket) {
@@ -65,8 +66,10 @@ public class ServerCommunicationThread implements Runnable {
                             }
                         }
                     } catch (IOException e) {
+                        ServerPrint.error(e.getMessage());
                         e.printStackTrace();
                     } catch (ClassNotFoundException e) {
+                        ServerPrint.error(e.getMessage());
                         e.printStackTrace();
                     }
                 }
