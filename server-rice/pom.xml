@@ -11,6 +11,13 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>server-rice</artifactId>
     <name>RICE Server</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.adlerd.project-rice</groupId>
+            <artifactId>core-rice</artifactId>
+            <version>1.0.0-alpha</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <main.class>com.rice.server.Server</main.class>

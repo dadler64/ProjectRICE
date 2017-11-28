@@ -6,7 +6,9 @@ import com.rice.lib.Packet;
 import com.rice.lib.packets.HandshakePacket;
 import javafx.util.Pair;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class ClientCommunicationThread implements Runnable {
@@ -43,17 +45,16 @@ public class ClientCommunicationThread implements Runnable {
         ) {
             Print.debug("Socket connection success! Connected to server at " + hostname + ":" + port + "!");
             run = true;
+            // Send handshake
             toServer.writeObject(new HandshakePacket(credentials.getKey()));
             System.out.println("Sent hand shake");
+
             while (run) {
                 Packet packet = null;
                 while((packet = (Packet)fromServer.readObject()) != null) {
                     System.out.println(packet.getId());
                 }
-//                inputLine = fromServer.readUTF();
-//                System.out.println("Server -> " + inputLine);
-//                outputLine = protocol.processInput(inputLine);
-//                Thread.sleep(500);
+
             }
             socket.close();
             Print.debug("Server Stopped!");

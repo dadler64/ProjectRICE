@@ -5,6 +5,9 @@ import com.rice.client.util.Print;
 
 import java.util.Stack;
 
+/**
+ * Class to watch the users input for each file and suppley undo and redo functionality as well as syntax
+ */
 public class TextWatcherThread extends Thread {
 
     private Stack<String> prevHistory = new Stack<>();

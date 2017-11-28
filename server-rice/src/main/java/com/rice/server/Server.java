@@ -16,14 +16,12 @@
 
 package com.rice.server;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.rice.server.ui.Console;
-import com.rice.server.util.ServerLogger;
-import com.rice.server.util.ServerPrint;
-import com.sun.media.jfxmedia.logging.Logger;
+import com.rice.lib.Packet;
+import com.rice.lib.packets.CursorPacket;
+import com.rice.lib.packets.DisconnectPacket;
+import com.rice.lib.packets.HandshakePacket;
+import com.rice.lib.packets.ModifyPacket;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -35,24 +33,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.io.Reader;
-import java.lang.reflect.Type;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public class Server extends Application {
 
-    private static Stack<String> commands;
-    private Thread thread;
-    private List<User> userList;
-    public static boolean GUI = true;
+    private static List<User> userList = new ArrayList<>();
     private ServerCommunicationThread serverCommunicationThread;
+    private TextArea commandArea;
 
-//
 //    private static void getUsersFromJson(InputStream inputStream) {
 //        final Reader reader = new InputStreamReader(inputStream);
 //        final Gson gson = new Gson();
@@ -63,33 +53,32 @@ public class Server extends Application {
 //    }
 
     public static void main(String... args) {
-        ServerLogger.start(Logger.ERROR, false);
         Application.launch();
     }
 
-    public List<User> getUserList() {
+    public static List<User> getUserList() {
         return userList;
     }
 
-    public void addUser(User user) {
+    public static void addUser(User user) {
         userList.add(user);
     }
 
     @Override
     public void start(Stage stage) {
-        userList = new ArrayList<>();
         BorderPane root = new BorderPane();
         HBox buttonBar = new HBox();
         Button btnQuit = new Button("Quit");
         Button btnStartServer = new Button("Start Server");
         Button btnStopServer = new Button("Stop Server");
-        TextArea commandArea = new TextArea();
+        commandArea = new TextArea();
 
         // Show 'System.out' in the server console
-        Console console = new Console(commandArea);
-        PrintStream printStream = new PrintStream(console, true);
-        System.setOut(printStream);
-        System.setErr(printStream);
+//        Console console = new Console(commandArea);
+//        SplitOutputStream stream = new SplitOutputStream(console, System.out);
+//        PrintStream printStream = new PrintStream(stream, true);
+//        System.setOut(printStream);
+//        System.setErr(printStream);
 
         // Set up button bar
         buttonBar.setPrefHeight(50);
@@ -106,13 +95,16 @@ public class Server extends Application {
 
         // Auto-Scroll to the bottom
         commandArea.textProperty().addListener((ChangeListener<Object>) (observable, oldValue, newValue) -> {
-            commandArea.setScrollTop(Double.MAX_VALUE);// Use Double.MIN_VALUE to scroll to the top
+            // Use Double.MIN_VALUE to scroll to the top
+            commandArea.setScrollTop(Double.MAX_VALUE);
         });
         commandArea.setEditable(false);
         commandArea.setWrapText(false);
         commandArea.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #ffffff; -fx-highlight-text-fill: #000000; -fx-text-fill: #ffffff; ");
 
-        ScrollPane scrollPane = new ScrollPane(commandArea);
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(commandArea);
+        scrollPane.setVisible(true);
         scrollPane.setFitToHeight(true);
         scrollPane.setFitToWidth(true);
 
@@ -128,34 +120,109 @@ public class Server extends Application {
         stage.setScene(scene);
         stage.show();
         // Shut everything down if you close the window
-        stage.setOnHiding(event -> System.exit(0));
+        stage.setOnHiding(event -> {
+            System.out.println("Shutting down...");
+//            serverCommunicationThread.shouldRun(false);
+            System.exit(0);
+        });
 
         // Start server button
         btnStartServer.setAlignment(Pos.CENTER);
         btnStartServer.setOnAction(event -> {
-            Platform.runLater(new Runnable() {
-                @Override
-                public void run() {
-                    new Thread(serverCommunicationThread = new ServerCommunicationThread(Server.this)).start();
-                }
-            });
+            System.out.println("Starting server!");
+            serverCommunicationThread = new ServerCommunicationThread();
+            new Thread(serverCommunicationThread).start();
         });
 
         // Stop server button
         btnStopServer.setAlignment(Pos.CENTER);
         btnStopServer.setOnAction(event -> {
-            ServerPrint.info("Stopping RICE Server...");
-            // Stop the networking thread
-            serverCommunicationThread.stop();
-            ServerPrint.info("RICE Server successfully stopped.");
+            System.out.println("Stopping server...");
+            serverCommunicationThread.shouldRun(false);
+            System.out.println("Server stopped.");
         });
 
         // Quit program button
         btnQuit.setAlignment(Pos.CENTER);
         btnQuit.setCancelButton(true);
         btnQuit.setOnAction(e -> {
-            ServerPrint.info("Shutting down RICE Server GUI...");
+            System.out.println("Shutting down RICE Server GUI...");
             System.exit(0);
         });
     }
+
+    public void writeToConsole(String str) {
+        commandArea.appendText(str + "\n");
+    }
 }
+
+class ServerCommunicationThread implements Runnable {
+
+
+    private int port;
+    private boolean run;
+
+    public ServerCommunicationThread() {
+        this(25000);
+    }
+
+
+    public ServerCommunicationThread(int port) {
+        this.port = port;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Server Started and listening on port " + port);
+        ClientAcceptThread clientAcceptThread = new ClientAcceptThread(port);
+        clientAcceptThread.start();
+
+        run = true;
+        System.out.println("Running!");
+        while (run) {
+//            System.out.println(getUserList().size());
+//            if (!server.getUserList().isEmpty()) {
+            for (final User u : Server.getUserList()) {
+//                System.out.println(u.getStatus().name());
+                Packet packet = null;
+                try {
+                    while ((packet = (Packet) u.getInputStream().readObject()) != null) {
+                        if (packet instanceof HandshakePacket) {
+                            System.out.println("Handshake received");
+                            final HandshakePacket handshakePacket = (HandshakePacket) packet;
+                            u.setUsername(handshakePacket.getUsername());
+                            u.setStatus(UserStatus.LOGGED_ON);
+//                                u.getOutputStream().writeObject(new WelcomePacket());
+                            continue;
+                        }
+                        if (packet instanceof DisconnectPacket) {
+                            final DisconnectPacket disconnectPacket = (DisconnectPacket) packet;
+                            continue;
+                        }
+                        for (final User u2 : Server.getUserList()) {
+                            if (u2.equals(u)) {
+                                continue;
+                            }
+                            u2.getOutputStream().writeObject(packet);
+                        }
+                        if (packet instanceof ModifyPacket) {
+                            final ModifyPacket modifyPacket = (ModifyPacket) packet;
+
+                        }
+                        if (packet instanceof CursorPacket) {
+                            final CursorPacket cursorPacket = (CursorPacket) packet;
+                        }
+                    }
+                } catch (IOException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+//        }
+    }
+
+    public void shouldRun(boolean shouldRun) {
+        this.run = shouldRun;
+    }
+}
+

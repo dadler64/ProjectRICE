@@ -25,6 +25,7 @@
     <modules>
         <module>client-rice</module>
         <module>server-rice</module>
+        <module>core-rice</module>
     </modules>
 
 

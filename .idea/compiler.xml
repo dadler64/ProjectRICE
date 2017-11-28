@@ -12,6 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client-rice" target="1.8" />
+      <module name="core-rice" target="1.8" />
       <module name="project-rice" target="1.8" />
       <module name="server-rice" target="1.8" />
     </bytecodeTargetLevel>

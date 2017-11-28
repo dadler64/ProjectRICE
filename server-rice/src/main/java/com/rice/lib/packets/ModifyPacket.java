@@ -2,7 +2,7 @@ package com.rice.lib.packets;
 
 import com.rice.lib.Packet;
 
-public class ModifyPacket extends Packet{
+public class ModifyPacket extends Packet {
 
     private String data;
 
