@@ -86,7 +86,7 @@ public class Client extends Application {
         stage.setScene(scene);
         stage.show();
 
-        addNewFile();
+        addNewFile("RICE Test File.txt");
     }
 
     private MenuBar initMenuBar(MenuBar menuBar) {
@@ -255,6 +255,21 @@ public class Client extends Application {
             fileNumber++;
         }
         FileTab fileTab = new FileTab(newFile);
+        fileTab.setOnClosed(e -> {
+            for (FileTab file : openFiles) {
+                if (fileTab.equals(file)) {
+                    openFiles.remove(openFiles.indexOf(file));
+                    Print.debug("Successfully removed " + fileTab.getText());
+                    break;
+                }
+            }
+        });
+        tabPane.getTabs().add(fileTab);
+        openFiles.add(fileTab);
+    }
+
+    private void addNewFile(String title) {
+        FileTab fileTab = new FileTab(title);
         fileTab.setOnClosed(e -> {
             for (FileTab file : openFiles) {
                 if (fileTab.equals(file)) {
