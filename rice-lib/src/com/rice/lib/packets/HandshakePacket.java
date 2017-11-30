@@ -2,7 +2,11 @@ package com.rice.lib.packets;
 
 import com.rice.lib.Packet;
 
-public class HandshakePacket extends Packet {
+import java.io.Serializable;
+
+public class HandshakePacket extends Packet implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String username;
 

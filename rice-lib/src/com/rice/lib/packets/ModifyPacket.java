@@ -2,7 +2,11 @@ package com.rice.lib.packets;
 
 import com.rice.lib.Packet;
 
-public class ModifyPacket extends Packet {
+import java.io.Serializable;
+
+public class ModifyPacket extends Packet implements Serializable {
+
+    private static final long serialVersionUID = 4L;
 
     private String data;
 

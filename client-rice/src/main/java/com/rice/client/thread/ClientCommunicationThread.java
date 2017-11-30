@@ -4,11 +4,11 @@ import com.rice.client.Client;
 import com.rice.client.util.Print;
 import com.rice.lib.Packet;
 import com.rice.lib.packets.HandshakePacket;
+import com.rice.lib.packets.InitialFilePacket;
+import com.rice.lib.packets.WelcomePacket;
 import javafx.util.Pair;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class ClientCommunicationThread implements Runnable {
@@ -19,6 +19,7 @@ public class ClientCommunicationThread implements Runnable {
     private String hostname;
     private int port;
     private Pair<String, String> credentials;
+    private boolean canUpdate = false;
 
     public ClientCommunicationThread(Client client, Pair<String, String> credentials) {
         this(client, credentials, "127.0.0.1", 25000);
@@ -38,23 +39,25 @@ public class ClientCommunicationThread implements Runnable {
         Print.debug("Hostname=" + hostname);
         Print.debug("Port=" + port);
 
-        try (
-                Socket socket = new Socket(hostname, port);
-                final ObjectOutputStream toServer = new ObjectOutputStream(socket.getOutputStream());
-                final ObjectInputStream fromServer = new ObjectInputStream(socket.getInputStream())
-        ) {
+        try {
+            final Socket socket = new Socket(hostname, port);
+            final ObjectOutputStream toServer = new ObjectOutputStream(socket.getOutputStream());
+            final ObjectInputStream fromServer = new ObjectInputStream(socket.getInputStream());
             Print.debug("Socket connection success! Connected to server at " + hostname + ":" + port + "!");
             run = true;
             // Send handshake
             toServer.writeObject(new HandshakePacket(credentials.getKey()));
+//            toServer.flush();
             System.out.println("Sent hand shake");
 
             while (run) {
                 Packet packet = null;
                 while((packet = (Packet)fromServer.readObject()) != null) {
-                    System.out.println(packet.getId());
+                    if(packet instanceof WelcomePacket) {
+                        toServer.writeObject(new InitialFilePacket(this.client.getCurrentFile().getText(), this.client.getCurrentFile().getFileName()));
+                        canUpdate = true;
+                    }
                 }
-
             }
             socket.close();
             Print.debug("Server Stopped!");

@@ -22,5 +22,6 @@
     <orderEntry type="library" name="Maven: org.fxmisc.flowless:flowless:0.6" level="project" />
     <orderEntry type="library" name="Maven: org.fxmisc.wellbehaved:wellbehavedfx:0.3" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
+    <orderEntry type="module" module-name="rice-lib" />
   </component>
 </module>

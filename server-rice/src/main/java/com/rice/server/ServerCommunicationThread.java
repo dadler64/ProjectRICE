@@ -1,17 +1,18 @@
 package com.rice.server;
 
 import com.rice.lib.Packet;
-import com.rice.lib.packets.CursorPacket;
-import com.rice.lib.packets.DisconnectPacket;
-import com.rice.lib.packets.HandshakePacket;
-import com.rice.lib.packets.ModifyPacket;
+import com.rice.lib.packets.*;
 
+import java.io.EOFException;
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ServerCommunicationThread implements Runnable {
 
     private int port;
-    private boolean run;
+    private boolean run = true;
 
     public ServerCommunicationThread() {
         this(25000);
@@ -28,29 +29,33 @@ public class ServerCommunicationThread implements Runnable {
         ClientAcceptThread clientAcceptThread = new ClientAcceptThread(port);
         clientAcceptThread.start();
 
-        run = true;
         System.out.println("Running!");
         while (run) {
 //            System.out.println(getUserList().size());
 //            if (!server.getUserList().isEmpty()) {
-            for (final User u : Server.getUserList()) {
+            final List<User> tempList = new ArrayList<>();
+            tempList.addAll(Server.getUserList());
+            if(tempList.size() > 0) {
+                System.out.println(tempList.size());
+            }
+            for (final User u : tempList) {
 //                System.out.println(u.getStatus().name());
-                Packet packet = null;
                 try {
-                    while ((packet = (Packet) u.getInputStream().readObject()) != null) {
+                    Packet packet = null;
+                    while ((packet = (Packet)u.getInputStream().readObject()) != null) {
                         if (packet instanceof HandshakePacket) {
                             System.out.println("Handshake received");
                             final HandshakePacket handshakePacket = (HandshakePacket) packet;
                             u.setUsername(handshakePacket.getUsername());
                             u.setStatus(UserStatus.LOGGED_ON);
-//                                u.getOutputStream().writeObject(new WelcomePacket());
+                            u.getOutputStream().writeObject(new WelcomePacket());
                             continue;
                         }
                         if (packet instanceof DisconnectPacket) {
                             final DisconnectPacket disconnectPacket = (DisconnectPacket) packet;
                             continue;
                         }
-                        for (final User u2 : Server.getUserList()) {
+                        for (final User u2 : tempList) {
                             if (u2.equals(u)) {
                                 continue;
                             }
@@ -63,7 +68,13 @@ public class ServerCommunicationThread implements Runnable {
                         if (packet instanceof CursorPacket) {
                             final CursorPacket cursorPacket = (CursorPacket) packet;
                         }
+                        if(packet instanceof InitialFilePacket) {
+                            final InitialFilePacket filePacket = (InitialFilePacket)packet;
+                            new Thread(new FileSaveRunnable(new File(String.format("%s.txt", filePacket.getName())), filePacket.getText()));
+                        }
                     }
+                } catch(EOFException e) {
+                    e.printStackTrace();
                 } catch (IOException | ClassNotFoundException e) {
                     e.printStackTrace();
                 }

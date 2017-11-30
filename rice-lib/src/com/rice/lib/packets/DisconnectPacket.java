@@ -2,7 +2,11 @@ package com.rice.lib.packets;
 
 import com.rice.lib.Packet;
 
-public class DisconnectPacket extends Packet {
+import java.io.Serializable;
+
+public class DisconnectPacket extends Packet implements Serializable {
+
+    private static final long serialVersionUID = 2L;
 
     private DisconnectReason disconnectReason;
 
@@ -15,6 +19,6 @@ public class DisconnectPacket extends Packet {
         return disconnectReason;
     }
 }
-enum DisconnectReason {
+enum DisconnectReason implements Serializable {
     USER_QUIT, DOCUMENT_CLOSE;
 }

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/client-rice/client-rice.iml" filepath="$PROJECT_DIR$/client-rice/client-rice.iml" />
       <module fileurl="file://$PROJECT_DIR$/project-rice.iml" filepath="$PROJECT_DIR$/project-rice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rice-lib/rice-lib.iml" filepath="$PROJECT_DIR$/rice-lib/rice-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-rice/server-rice.iml" filepath="$PROJECT_DIR$/server-rice/server-rice.iml" />
     </modules>
   </component>

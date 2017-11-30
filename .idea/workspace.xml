@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4425a0df-bc80-42d5-a0ac-4820efeec9d2" name="Default" comment="Further simplification of project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/ServerGUI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/backups/CommandLinePane112517.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/backups/Util112617.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/examples/osxconsole/ConsoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/examples/osxconsole/ConsoleTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/examples/osxconsole/OSXConsole.java" afterPath="$PROJECT_DIR$/src/test/java/examples/osxconsole/OSXConsole.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rice-lib/rice-lib.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/InitialFilePacket.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/FileSaveRunnable.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/CursorPacket.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/DisconnectPacket.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/ModifyPacket.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/Packet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/HandshakePacket.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/Packet.java" afterPath="$PROJECT_DIR$/rice-lib/src/com/rice/lib/Packet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/HandshakePacket.java" afterPath="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/HandshakePacket.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/CursorPacket.java" afterPath="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/CursorPacket.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/DisconnectPacket.java" afterPath="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/DisconnectPacket.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/ModifyPacket.java" afterPath="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/ModifyPacket.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/WelcomePacket.java" afterPath="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/WelcomePacket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/client-rice.iml" afterPath="$PROJECT_DIR$/client-rice/client-rice.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" afterPath="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/server-rice.iml" afterPath="$PROJECT_DIR$/server-rice/server-rice.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ClientAcceptThread.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ClientAcceptThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" afterPath="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,13 +48,121 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java">
+      <file leaf-file-name="ClientAcceptThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ClientAcceptThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="88" column="38" lean-forward="false" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+            <state relative-caret-position="448">
+              <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerCommunicationThread.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
               <folding>
-                <element signature="method#loginUser#0;class#Client#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileSaveRunnable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/FileSaveRunnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-77">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+              <folding>
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="e#1325#1326#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModifyPacket.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/ModifyPacket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisconnectPacket.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/DisconnectPacket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CursorPacket.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/CursorPacket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientCommunicationThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InitialFilePacket.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/InitialFilePacket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,6 +187,7 @@
       <find>System.out.println</find>
       <find>server.writeToConsole</find>
       <find>server.get</find>
+      <find>Server</find>
     </findStrings>
     <replaceStrings>
       <replace>Print.info</replace>
@@ -79,6 +200,7 @@
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/threads</dir>
+      <dir>C:\Users\Zachary Shelton\OneDrive\College\CompSci_2000\ProjectRICE\client-rice\src\main\java\com\rice\client</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -106,17 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/SplitOutputStream.java" />
-        <option value="$PROJECT_DIR$/test/java/examples/JavaKeywordsAsync.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/syntax/Java.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/resources/css/bootstrap3.css" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/resources/css/flat_button_light.css" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/SettingsTab.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/util/Print.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/MenuSample.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/resources/css/macos.css" />
-        <option value="$PROJECT_DIR$/server-rice/src/main/resources/users.json" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/syntax/Syntax.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/threads/ParagraphThread.java" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/TextWatcher.java" />
@@ -146,17 +257,28 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/core-rice/pom.xml" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/DisconnectPacket.java" />
-        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/SimpleServer.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerProtocol.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/LoginThread.java" />
-        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ClientAcceptThread.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/server-rice/pom.xml" />
-        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/ServerGUI.java" />
         <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java" />
         <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/Packet.java" />
+        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/Packet.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/Packet.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/CursorPacket.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/DisconnectPacket.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/HandshakePacket.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/ModifyPacket.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/WelcomePacket.java" />
+        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ClientAcceptThread.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/IntialFilePacket.java" />
+        <option value="$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/InitialFilePacket.java" />
+        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/FileSaveRunnable.java" />
+        <option value="$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java" />
+        <option value="$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java" />
       </list>
     </option>
   </component>
@@ -212,7 +334,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1142" />
@@ -282,279 +404,104 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="client-rice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="client-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="thread" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="rice-lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
+              <item name="rice-lib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
-              <item name="DisconnectPacket.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="client-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="server-rice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="server-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="server-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="server-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="server-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
-              <item name="DisconnectPacket.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="packets" type="462c0819:PsiDirectoryNode" />
-              <item name="ModifyPacket.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectRICE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectRICE" type="462c0819:PsiDirectoryNode" />
               <item name="server-rice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-rice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="server-rice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="rice" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -562,11 +509,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="osmorc.ide.settings" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15136719" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -576,12 +524,8 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JAVA" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/core-rice/src/main/java" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/css" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons/light" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.rice.client.ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client-rice/src/main/java/com/rice" />
@@ -596,8 +540,12 @@
       <recent name="com.rice.client" />
       <recent name="com.rice.server" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.rice.client.ui" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core-rice/src/main/java" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/css" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/client-rice/src/main/resources/icons/light" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -790,6 +738,9 @@
       <workItem from="1511874834874" duration="11881000" />
       <workItem from="1511915579291" duration="4021000" />
       <workItem from="1511985666989" duration="14000" />
+      <workItem from="1511985965306" duration="6497000" />
+      <workItem from="1512068823669" duration="77000" />
+      <workItem from="1512069230005" duration="2743000" />
     </task>
     <task id="LOCAL-00001" summary="Project clean up and reconfiguration">
       <created>1510190444234</created>
@@ -837,7 +788,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213492000" />
+    <option name="totallyTimeSpent" value="222809000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -849,34 +800,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1142" extended-state="0" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="2582" height="1402" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29641965" sideWeight="0.43493977" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924527" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.108093716" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07911646" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299285" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37695312" sideWeight="0.5621971" order="2" side_tool="true" content_ui="tabs" x="236" y="407" width="1159" height="704" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28975853" sideWeight="0.37951806" order="2" side_tool="true" content_ui="tabs" x="236" y="407" width="1159" height="704" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32397193" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2284345" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25261045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28756058" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25282714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29056603" sideWeight="0.628328" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28975853" sideWeight="0.6204819" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29692307" sideWeight="0.4378029" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735848" sideWeight="0.49557522" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -903,175 +853,26 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="((Server)this).userList" custom="com.rice.server.Server" />
+        <watch expression="tempList" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/ui/fileTabPane.java" />
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/TextWatcherThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="105" lean-forward="false" selection-start-line="8" selection-start-column="105" selection-end-line="8" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/ServerPrint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="96" column="23" lean-forward="false" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/test/java/com/rice/client/CredentialManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/UserStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Launcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="235" column="0" lean-forward="false" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="1335" column="0" lean-forward="false" selection-start-line="1335" selection-start-column="0" selection-end-line="1335" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
-          <folding>
-            <element signature="e#11597#11598#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="611" column="0" lean-forward="false" selection-start-line="611" selection-start-column="0" selection-end-line="611" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/HashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="2034" column="0" lean-forward="false" selection-start-line="2034" selection-start-column="0" selection-end-line="2034" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="507" column="0" lean-forward="false" selection-start-line="507" selection-start-column="0" selection-end-line="507" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/System.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/HashMap.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/HashSet.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/Collections.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java" />
     <entry file="file://$PROJECT_DIR$/core-rice/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/HandshakePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/CursorPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/Packet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/ModifyPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/DisconnectPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/HandshakePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/DisconnectPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/CursorPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/CursorPacket.java" />
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/ModifyPacket.java" />
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/DisconnectPacket.java" />
     <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/SimpleServer.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ScrollPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="119" column="31" lean-forward="false" selection-start-line="119" selection-start-column="31" selection-end-line="119" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ScrollPane.java" />
     <entry file="file://$PROJECT_DIR$/client-rice/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1097,77 +898,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ListChangeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/stage/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="470" column="0" lean-forward="false" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
-          <folding>
-            <element signature="e#2254#2262#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="399" column="0" lean-forward="false" selection-start-line="399" selection-start-column="0" selection-end-line="399" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/stage/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
-          <folding>
-            <element signature="e#5764#5771#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/FXCollections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="3082" column="25" lean-forward="false" selection-start-line="3082" selection-start-column="25" selection-end-line="3082" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ListChangeBuilder.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ObservableListBase.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/stage/Window.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/application/Application.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/stage/Stage.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/javafx-src.zip!/javafx/collections/FXCollections.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/io/PrintStream.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ui/Console.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1202,18 +941,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="805">
           <caret line="108" column="5" lean-forward="false" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="169" column="1" lean-forward="true" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/DatagramSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1177">
+          <caret line="194" column="11" lean-forward="false" selection-start-line="194" selection-start-column="11" selection-end-line="194" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/Packet.java" />
+    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/lib/packets/HandshakePacket.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14532">
+          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/HandshakePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/WelcomePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/Packet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="525">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
-            <element signature="e#0#1329#0" expanded="true" />
             <element signature="e#1215#1216#0" expanded="true" />
             <element signature="e#1246#1247#0" expanded="true" />
             <element signature="e#1291#1292#0" expanded="true" />
@@ -1222,20 +1023,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java">
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ClientAcceptThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+        <state relative-caret-position="448">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/ModifyPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ClientAcceptThread.java">
+    <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/DisconnectPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="126">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/CursorPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rice-lib/src/com/rice/lib/packets/InitialFilePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/FileSaveRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1244,26 +1094,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/thread/ClientCommunicationThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="448">
+          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/lib/packets/ModifyPacket.java">
+    <entry file="file://$PROJECT_DIR$/server-rice/src/main/java/com/rice/server/ServerCommunicationThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-rice/src/main/java/com/rice/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="88" column="38" lean-forward="false" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+        <state relative-caret-position="282">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding>
-            <element signature="method#loginUser#0;class#Client#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1309,7 +1151,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1321,12 +1163,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>client-rice</last-edited>
+          <last-edited>server-rice</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
