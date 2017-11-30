@@ -1,6 +1,8 @@
 package com.rice.lib;
 
-public class Packet {
+import java.io.Serializable;
+
+public class Packet implements Serializable{
 
     private int id;
 
