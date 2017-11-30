@@ -2,7 +2,11 @@ package com.rice.lib.packets;
 
 import com.rice.lib.Packet;
 
-public class CursorPacket extends Packet {
+import java.io.Serializable;
+
+public class CursorPacket extends Packet implements Serializable {
+
+    private static final long serialVersionUID = 5L;
 
     private int line, pos;
 
