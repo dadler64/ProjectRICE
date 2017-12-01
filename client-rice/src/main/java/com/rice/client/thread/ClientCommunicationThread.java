@@ -5,10 +5,13 @@ import com.rice.client.util.Print;
 import com.rice.lib.Packet;
 import com.rice.lib.packets.HandshakePacket;
 import com.rice.lib.packets.InitialFilePacket;
+import com.rice.lib.packets.ModifyPacket;
 import com.rice.lib.packets.WelcomePacket;
 import javafx.util.Pair;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class ClientCommunicationThread implements Runnable {
@@ -57,13 +60,26 @@ public class ClientCommunicationThread implements Runnable {
                         toServer.writeObject(new InitialFilePacket(this.client.getCurrentFile().getText(), this.client.getCurrentFile().getFileName()));
                         canUpdate = true;
                     }
+                    if (packet instanceof ModifyPacket) {
+                        ModifyPacket modifyPacket = (ModifyPacket) packet;
+                        final String content = client.getCurrentFile().getTextAreaContent();
+                        String modifiedContent = null;
+                        switch (modifyPacket.getModifyType()) {
+                            case INSERT:
+                                modifiedContent = String.format("%s%s%s", content.substring(0, modifyPacket.getStartPos()), modifyPacket.getData(), content.substring(modifyPacket.getEndPos()));
+                                this.client.getCurrentFile().setTextArea(modifiedContent);
+                                break;
+                            case DELETE:
+                                modifiedContent = String.format("%s%s", content.substring(0, modifyPacket.getStartPos()), content.substring(modifyPacket.getEndPos()));
+                                this.client.getCurrentFile().setTextArea(modifiedContent);
+                                break;
+                        }
+                    }
                 }
             }
             socket.close();
             Print.debug("Server Stopped!");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

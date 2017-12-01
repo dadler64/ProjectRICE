@@ -19,6 +19,3 @@ public class DisconnectPacket extends Packet implements Serializable {
         return disconnectReason;
     }
 }
-enum DisconnectReason implements Serializable {
-    USER_QUIT, DOCUMENT_CLOSE;
-}

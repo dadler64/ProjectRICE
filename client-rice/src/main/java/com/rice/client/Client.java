@@ -86,7 +86,7 @@ public class Client extends Application {
         stage.setScene(scene);
         stage.show();
 
-        addNewFile("RICE Test File.txt");
+        addNewFile("RICE Test File.txtloc ");
     }
 
     private MenuBar initMenuBar(MenuBar menuBar) {
@@ -117,9 +117,9 @@ public class Client extends Application {
         Menu editMenu = new Menu("Edit");
 
         MenuItem undo = new MenuItem("Undo");
-        undo.setOnAction(e -> getCurrentFile().undo());
+//        undo.setOnAction(e -> getCurrentFile().undo());
         MenuItem redo = new MenuItem("Redo");
-        redo.setOnAction(e -> getCurrentFile().redo());
+//        redo.setOnAction(e -> getCurrentFile().redo());
 
         SeparatorMenuItem sepEdit1 = new SeparatorMenuItem();
 
@@ -205,10 +205,10 @@ public class Client extends Application {
         sep2.setVisible(!darkTheme);
         // Undo button
         Button undoBtn = new CustomButton("PNG", "undo", darkTheme);
-        undoBtn.setOnAction(e -> getCurrentFile().undo());
+//        undoBtn.setOnAction(e -> getCurrentFile().undo());
         // Redo button
         Button redoBtn = new CustomButton("PNG", "redo", darkTheme);
-        redoBtn.setOnAction(e -> getCurrentFile().redo());
+//        redoBtn.setOnAction(e -> getCurrentFile().redo());
         // Horizontal separator
         Separator sep3 = new CustomSeparator();
         sep3.setVisible(!darkTheme);

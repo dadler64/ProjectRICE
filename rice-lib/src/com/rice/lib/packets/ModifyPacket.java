@@ -53,6 +53,3 @@ public class ModifyPacket extends Packet implements Serializable {
         return endPos;
     }
 }
-enum ModifyType {
-    INSERT, DELETE,
-}

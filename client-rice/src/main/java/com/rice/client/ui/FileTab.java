@@ -3,6 +3,7 @@ package com.rice.client.ui;
 import com.rice.client.thread.TextWatcherThread;
 import com.rice.client.util.Print;
 import javafx.scene.control.Tab;
+import javafx.scene.input.KeyCode;
 import org.apache.commons.io.FilenameUtils;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
@@ -33,24 +34,30 @@ public class FileTab extends Tab {
         setUp();
     }
 
-    public void undo() {
-        this.textWatcher.undo();
-    }
-
-    public void redo() {
-        this.textWatcher.redo();
-    }
-
     private void setUp() {
         this.textArea.setParagraphGraphicFactory(LineNumberFactory.get(textArea));
 
         // Text selection test
-        textArea.setOnContextMenuRequested(e -> Print.debug("TEST: Selected text: \n" + textArea.getSelectedText()));
+        textArea.setOnContextMenuRequested(e -> Print.debug("TEST: Selected text: \n" + textArea.getSelectedText() +
+                "\n Caret ParIndex: " + textArea.getCaretSelectionBind().getAnchorParIndex() +
+                "\n Caret Position: " + textArea.getCaretSelectionBind().getAnchorPosition() +
+                "\n Caret ColPosition: " + textArea.getCaretSelectionBind().getAnchorColPosition()));
+
+        //
+        textArea.setOnKeyTyped(e -> {
+            if (e.getCode() == KeyCode.BACK_SPACE) {
+                // Return cursor position
+            } else if (e.getCode() == KeyCode.DELETE) {
+                // Return cursor position plus one
+            }
+        });
+
         // Get the changes in strings
         textArea.textProperty().addListener((observable, oldValue, newValue) -> {
             this.oldText = oldValue;
             this.newText = newValue;
         });
+
 
         this.setText(fileName);
         this.setContent(new VirtualizedScrollPane<>(textArea));
