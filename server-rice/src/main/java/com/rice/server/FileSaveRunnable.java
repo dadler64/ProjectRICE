@@ -27,6 +27,7 @@ public class FileSaveRunnable implements Runnable {
         }
         try {
             final PrintStream printStream = new PrintStream(file);
+            System.out.println(String.format("Wrote contents to file: %s", file.getAbsoluteFile()));
             printStream.println(contents);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

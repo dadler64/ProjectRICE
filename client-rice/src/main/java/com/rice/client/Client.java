@@ -23,6 +23,7 @@ import com.rice.client.ui.FileTab;
 import com.rice.client.ui.SettingsTab;
 import com.rice.client.util.Logger;
 import com.rice.client.util.Print;
+import com.rice.lib.Packet;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -35,10 +36,8 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class Client extends Application {
     private static boolean loggedIn = false;
@@ -46,6 +45,9 @@ public class Client extends Application {
     private final boolean darkTheme = false;
     private ClientCommunicationThread clientCommThread;
     private TabPane tabPane = new TabPane();
+
+    public static Queue<Packet> packetQueue = new LinkedBlockingQueue<>();
+    public static Queue<Boolean> textAreaModified = new LinkedBlockingQueue<>();
 
     // List of all open tabs
     private List<FileTab> openFiles = new ArrayList<>();

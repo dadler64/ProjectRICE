@@ -1,13 +1,20 @@
 package com.rice.client.ui;
 
+import com.rice.client.Client;
 import com.rice.client.thread.TextWatcherThread;
+import com.rice.client.util.GoogleDMP;
 import com.rice.client.util.Print;
+import com.rice.lib.Packet;
+import com.rice.lib.packets.ModifyPacket;
+import com.rice.lib.packets.ModifyType;
 import javafx.scene.control.Tab;
 import javafx.scene.input.KeyCode;
 import org.apache.commons.io.FilenameUtils;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
+
+import java.util.LinkedList;
 
 @SuppressWarnings("Duplicates")
 public class FileTab extends Tab {
@@ -18,7 +25,7 @@ public class FileTab extends Tab {
     private String filePath = null;
     private String fileName;
     private TextWatcherThread textWatcher;
-    private String oldText;
+    private String oldText = "";
     private String newText;
 
     public FileTab(String fileName) {
@@ -38,24 +45,59 @@ public class FileTab extends Tab {
         this.textArea.setParagraphGraphicFactory(LineNumberFactory.get(textArea));
 
         // Text selection test
-        textArea.setOnContextMenuRequested(e -> Print.debug("TEST: Selected text: \n" + textArea.getSelectedText() +
-                "\n Caret ParIndex: " + textArea.getCaretSelectionBind().getAnchorParIndex() +
-                "\n Caret Position: " + textArea.getCaretSelectionBind().getAnchorPosition() +
-                "\n Caret ColPosition: " + textArea.getCaretSelectionBind().getAnchorColPosition()));
+        textArea.setOnContextMenuRequested(e -> {
+                    Print.debug("TEST: Selected text: \n" + textArea.getSelectedText() +
+                            "\n Caret ParIndex: " + textArea.getCaretSelectionBind().getAnchorParIndex() +
+                            "\n Caret Position: " + textArea.getCaretSelectionBind().getAnchorPosition() +
+                            "\n Caret ColPosition: " + textArea.getCaretSelectionBind().getAnchorColPosition());
+                    Client.packetQueue.add(new ModifyPacket(null, ModifyType.INSERT, -1, -1, textArea.getCaretSelectionBind().getAnchorPosition(), textArea.getCaretSelectionBind().getAnchorPosition()));
+                }
+        );
+
+
 
         //
-        textArea.setOnKeyTyped(e -> {
+        textArea.setOnKeyPressed(e -> {
+            final int pos = textArea.caretPositionProperty().getValue();
+
             if (e.getCode() == KeyCode.BACK_SPACE) {
+                System.out.println("back");
+                Client.packetQueue.add(new ModifyPacket(null, ModifyType.DELETE, -1, -1, pos, pos));
                 // Return cursor position
             } else if (e.getCode() == KeyCode.DELETE) {
+                System.out.println("del");
+                Client.packetQueue.add(new ModifyPacket(null, ModifyType.DELETE, -1, -1, pos, pos+1));
                 // Return cursor position plus one
             }
         });
 
+        final GoogleDMP googleDMP = new GoogleDMP();
         // Get the changes in strings
         textArea.textProperty().addListener((observable, oldValue, newValue) -> {
-            this.oldText = oldValue;
-            this.newText = newValue;
+            if(newValue.equals("")) {
+                this.oldText = oldValue;
+                return;
+            }
+            final Boolean modified = Client.textAreaModified.poll();
+            if(modified != null && modified == true) {
+                return;
+            }
+            final LinkedList<GoogleDMP.Diff> tempList = googleDMP.diff_main(oldValue, newValue);
+            String changed = "";
+            for(final GoogleDMP.Diff d : tempList.toArray(new GoogleDMP.Diff[tempList.size()])) {
+                System.out.println(String.format("Changed: text->%s op->%s old->%s", d.text, d.operation.name(), oldValue));
+                if(d.operation != GoogleDMP.Operation.INSERT) {
+                    continue;
+                }
+                changed = d.text;
+                break;
+            }
+            if(changed.equals("")) {
+                return;
+            }
+            final int pos = textArea.caretPositionProperty().getValue();
+//            System.out.println(String.format("pos->%d", pos));
+            Client.packetQueue.add(new ModifyPacket(changed, ModifyType.INSERT, -1, -1, pos, pos));
         });
 
 
